@@ -1,0 +1,329 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>留言寄语 | HBUACM</title><meta name="description" content="点击图片前往留言板  第七届程序设计训练营  杨潇康 王旭 吴佳仪 马钰鹏 林锦东 华征豪 赵苗苗 葛政骅 韩墨霖 吴金硕  第八届程序设计训练营  蒋志宇 张子健 王利航 陈聪 刘雨婷 果家旭  第七届程序设计训练营    杨潇康2020级计算机科学与技术2班       目前就读于东北大学，2022年河北大学程序设计训练营总负责人。获得第八届中国高校计算机大赛（天梯赛）国家二等奖、"><meta name="author" content="HBU"><meta name="copyright" content="HBU"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://hbuacm.github.io/guestbook/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="留言寄语"><meta property="og:url" content="http://hbuacm.github.io/guestbook/"><meta property="og:site_name" content="HBUACM"><meta property="og:description" content="点击图片前往留言板  第七届程序设计训练营  杨潇康 王旭 吴佳仪 马钰鹏 林锦东 华征豪 赵苗苗 葛政骅 韩墨霖 吴金硕  第八届程序设计训练营  蒋志宇 张子健 王利航 陈聪 刘雨婷 果家旭  第七届程序设计训练营    杨潇康2020级计算机科学与技术2班       目前就读于东北大学，2022年河北大学程序设计训练营总负责人。获得第八届中国高校计算机大赛（天梯赛）国家二等奖、"><meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><meta property="article:published_time" content="2025-09-04T14:31:43.979Z"><meta property="article:modified_time" content="2025-09-04T14:31:43.979Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/blueimp-md5/js/md5.min.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"C++,二叉树,String,图,堆,栈,队列,头秃,AC,WA","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: false
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.1"></head><body><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">351</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">151</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">74</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/guestbook"><i class="fa-fw fas fa-message"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><header class="not-index-bg" id="page-header" style="background-image: url(/images/Training_Camp_Cove.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">HBUACM</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/guestbook"><i class="fa-fw fas fa-message"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="page_site-info"><h1 id="site_title">留言寄语</h1></div></header><main class="layout_page" id="content-inner"><div id="page"><div id="article-container"><div align="center"><a href="https://hbuacm.github.io/sticky-notes/">  <img src= "/img/loading.gif" data-src="../images/biyejiyu.png" href=""/>
+</a></div>
+
+
+<div align="center"><strong><a href="https://hbuacm.github.io/sticky-notes/">点击图片前往留言板</a></strong></div>
+
+<p><a href="#第七届程序设计训练营">第七届程序设计训练营</a></p>
+<ul>
+<li><a href="#杨潇康">杨潇康</a></li>
+<li><a href="#王旭">王旭</a></li>
+<li><a href="#吴佳仪">吴佳仪</a></li>
+<li><a href="#马钰鹏">马钰鹏</a></li>
+<li><a href="#林锦东">林锦东</a></li>
+<li><a href="#华征豪">华征豪</a></li>
+<li><a href="#赵苗苗">赵苗苗</a></li>
+<li><a href="#葛政骅">葛政骅</a></li>
+<li><a href="#韩墨霖">韩墨霖</a></li>
+<li><a href="#吴金硕">吴金硕</a></li>
+</ul>
+<p><a href="#第八届程序设计训练营">第八届程序设计训练营</a></p>
+<ul>
+<li><a href="#蒋志宇">蒋志宇</a></li>
+<li><a href="#张子健">张子健</a></li>
+<li><a href="#王利航">王利航</a></li>
+<li><a href="#陈聪">陈聪</a></li>
+<li><a href="#刘雨婷">刘雨婷</a></li>
+<li><a href="#果家旭">果家旭</a></li>
+</ul>
+<h1 id="第七届程序设计训练营"><a href="#第七届程序设计训练营" class="headerlink" title="第七届程序设计训练营"></a><div align="center"><strong>第七届程序设计训练营</strong></div></h1><div align="center"> <img src= "/img/loading.gif" data-src="../images/no7hezhao.jpg" href=""/></div>
+
+
+<h2 id="杨潇康"><a href="#杨潇康" class="headerlink" title="杨潇康"></a><div align="center"><strong>杨潇康</strong></div></h2><div align="center">2020级计算机科学与技术2班</div>
+<p>
+<div align="center"> <img width="150px" src= "/img/loading.gif" data-src="../images/yxk.jpg" href=""/></div>
+
+
+
+<p>目前就读于东北大学，2022年河北大学程序设计训练营总负责人。获得第八届中国高校计算机大赛（天梯赛）国家二等奖、个人三等奖，第七届全国大学生计算机系统能力培养大赛国家三等奖，第七届河北省大学生程序设计竞赛河北省三等奖，第29次CCF计算机软件能力认证（csp认证）考试300分全国累计排名3.29%。</p>
+<p>一、建设学科兴趣，确定努力方向</p>
+<p>我认为学科兴趣对于大学期间的学习是非常重要的。我和很多人一样，在高考志愿结束前从来没有想过自己本科会学计算机，更不要提有没有计算机学科基础。在大一的计算机导论的课程上，我开始感觉到计算机的魅力。开始研究自己的努力方向。这时候的我还不知道什么是算法、开发等。我开始在网上计算机相关知识，开始和学长讨论什么方向更有趣、更有前景。我任务死记硬背和闷头苦读都是没有太多效果的。首先应该建立学科兴趣，当我对计算机感兴趣的时候，我更想主动去了解基础的逻辑门是怎么构成了计算机系统，了解计算机中的0和1如果表达世间万物。</p>
+<p>二、知识与实践结合</p>
+<p>十分推荐大家多多参加比赛，多多参加项目。当在比赛或项目中遇到不会的知识，将会有更多的驱动力去学习。同时参加一个完整的项目也会帮助大家建立起完整的技术栈，也会极大提高大家的学科兴趣。在刚刚接触到比赛或项目的时候，必然会遇到很大的挫折，面对海量要学的知识，希望大家构建起良好的学习系统，逐个击破，详细在有了越来越多的知识储备后，我们的学习能力也会很快地进步。</p>
+<p>三、寄语</p>
+<p>希望大家充分珍惜大学四年地时光，无论是升学深造、投入生产工作、还是自主创新创业，都需要在本科期间打下良好的基础。我认为大学期间最重要地事情不是绩点多高，而是掌握了自己地学习方法，打下终身学习地基础。这样才能在以后的人生阶段，不断克服困难。祝愿大家都将取得最后的胜利！</p>
+<h2 id="王旭"><a href="#王旭" class="headerlink" title="王旭"></a><div align="center"><strong>王旭</strong></div></h2><div align="center">2020级计算机科学与技术2班</div>
+<p>
+<div align="center"> <img width="150px" src= "/img/loading.gif" data-src="../images/wx.jpeg" href=""/></div>
+
+
+<p>王旭目前就读于山东大学，本科在校期间获得ICPC全国邀请赛（陕西）银牌，中国高校计算机大赛团队国家二等奖、个人国家三等奖，河北省大学生程序设计竞赛一等奖，全国大学数学建模竞赛河北赛区一等奖。</p>
+<p>一、算法竞赛带给我的收获</p>
+<p>由于高考考得不是很理想，但也不打算复读，为了获取一个更好的学历，所以大学入学前，就开始了解保研的相关知识。初入大学，就开始努力学习，在大一的寒假时候，就了解到了程序设计训练营，但当时由于实力不足，没有学过数据结构，就没参加。直到大一的暑假才开始参加萌新营，然后慢慢了解算法竞赛，并深深扎根在算竞的世界里。自大二起，我就开始参加各种算法竞赛，如天梯赛、CCPC、ICPC、CSP等，同时也参加了一些数模竞赛，在这期间也认识到了许多学长学姐，例如赵润朔、刘哲轩、樊萌萌等，他们给予了我很大的帮助。在大二下学期，我和赵润朔、刘哲轩组成了XCPC队伍，我们每周六或周日都会训练一场比赛。大二的暑假，那是个很忙碌的时段，当时参加了杭电多校以及牛客多校训练营，每周有四场训练赛要打，既忙碌，又充实。之后就开始参加XCPC各种比赛，终于在大三下学期，获得了一块ICPC全国邀请赛西安银牌，又在大四下学期，获得了ICPC济南站铜牌。而且XCPC的群友也各个都是人才，说话又好听，我超喜欢这里。因为算法竞赛的加分，我也顺利取得了保研资格，同时自己的算法思维也大大提高了。</p>
+<p>二、社团为我提供了社交的平台</p>
+<p>由于我不擅长社交，所以社团是我结实朋友的主要途径了。在慧河工作室里，我认识了才华横溢的许多学长学姐以及同年级的同学们。在大二的时候，当然也认识了很多学弟学妹。临近期末考试的时候，在慧河工作室和学长学姐们一起复习，让我的复习效率增加了很多。在这里，可以和他们交流学习经验以及竞赛相关事情，对于扩展知识面很有帮助，加深了我对专业领域的理解。</p>
+<p>三、结语</p>
+<p>大学四年过得很快，要珍惜时光，对于要保研的同学，要在稳住自己的绩点排名，同时充实自己的竞赛和科研经历，这样才能在夏令营和预推免中去缩小和名校学生的差距。对于参加算法竞赛的同学，要多刷题，刷有思维的题，例如Codeforces，Atcoder等，虽然是英文题面，但油猴上有脚本Codeforces Better,Atcoder Better，能够翻译英文题面，这样就没有阅读障碍了。</p>
+<h2 id="吴佳仪"><a href="#吴佳仪" class="headerlink" title="吴佳仪"></a><div align="center"><strong>吴佳仪</strong></div></h2><div align="center">2020级计算机科学与技术2班</div>
+<p>
+<div align="center"> <img width="150px" src= "/img/loading.gif" data-src="../images/wjy.jpeg" href=""/></div>
+
+<p>目前就读于南方科技大学，本科在校期间，获奖无数，软著无数。</p>
+<p>当我最初踏入算法领域时，我也是从零开始的。最初对计算机和算法的兴趣，源于一次偶然的编程体验。当时，我意识到计算机不仅仅是工具，它还拥有无限的可能性，能够通过代码解决实际问题，甚至改变世界。这种认识激发了我深入探索算法的热情。随着学习的深入，我逐渐明白，算法不仅仅是冰冷的代码，而是逻辑思维与创新能力的结晶，它们在解决问题时展现出无穷的魅力。</p>
+<p>在这个过程中，我遇到了很多困难，有时候甚至觉得难以坚持。但正是这些挑战，磨练了我的意志，也让我学会了如何以更有效的方式思考问题。算法不仅教会了我技术，更让我懂得了坚持与努力的价值。<br>在这个过程中，我意识到算法的学习不仅仅是为了应对考试或完成任务，它更是锻炼思维、提升能力的重要途径。在算法学习过程中，失利是不可避免的，但这每一次失败都将成为我们进步的阶梯。坚持不懈，勇敢追梦，你们一定能在算法的世界中找到自己的位置。</p>
+<h2 id="马钰鹏"><a href="#马钰鹏" class="headerlink" title="马钰鹏"></a><div align="center"><strong>马钰鹏</strong></div></h2><div align="center">2020级计算机科学与技术1班</div>
+<p>
+<div align="center"> <img width="150px" src= "/img/loading.gif" data-src="../images/myp.png" href=""/></div>
+
+
+<p>马钰鹏目前就读于北京航空航天大学，本科在校期间获得全国大学生数学建模竞赛国家一等奖中国高校计算机大赛国家三等奖美国大学生数学建模竞赛 Honorable Mention 河北省大学生程序设计竞赛二等奖省级三好学生</p>
+<p>参与了由国家自然科学基金面上项目—— SAR图像噪声抑制模型及算法的研究，科研论文被ICIVIS (EI)会议录用。参与了一项由河北省自然科学基金资助的研究，科研论文被KSEM(CCF-C)会议收录。主导了河北大学智慧教务小程序的自习室推荐功能的设计与实施。</p>
+<p> 一、做比赛、写论文我没有觉得累的时候，因为那就是我想要做的事情。</p>
+<p>大学四年转瞬即逝，我们经历了全球疫情的持续，同时也体验了疫情逐渐平息后的生活。在规划未来时，我们不必过于急躁，要耐心审视自己，探索最适合自己的道路，详细思考自己未来的职业打算。</p>
+<p>就我个人而言，我从入学开始就确立了自己读研的目标。我认为在很多领域，研究生学位已经成为加入或者晋升的一个竞争优势。某些行业的职位要求具有研究生学历，如大学教师、研究员、高级工程师等。读研可以帮助你满足这些职位的资格要求。当然，如果仅从功利的角度来看，这样的想法似乎太过单一，但实际上，很多人在做选择时也是出于类似考量。幸运的是，在大学四年的探索过程中，我发现了自己对科研的兴趣，并找到了自己热爱的领域，这让我可以在追求未来的同时，也满足了自己的兴趣。</p>
+<p>决定读研之后，我一开始对保研没有太多具体想法，因为入学后对这方面也缺乏足够的了解。当时心里只想着通过考研来进入研究生阶段。大一的时候，我专注于学习专业课，那时并没有参与太多竞赛。大一下学期，我加入了大学生软件创新创业中心，在那里我认识了很多志同道合的好朋友。到了大四毕业时，这些朋友有的通过保研进入了更高的学府，有的进入了互联网大厂，有的进入了国有企业。在这个过程中，我也逐步了解了保研的相关事项。自大二起，我开始参与各种竞赛，如天梯赛、CCPC、数学建模、CSP等，到大二结束，几乎参加了所有的竞赛，也取得了不错的结果。在竞赛的选择上，我没有花费过多的注意力去筛选，因为只要是学科相关且自己学有余力，我认为都可以去尝试，在准备比赛的过程中，其实你就能真切地感受到自己的优劣势。到了大三，我将注意力转向了科研，成功发表了两篇论文。论文的发表带有一定的不确定性，所以我认为应首先抓住竞赛的机会，锻炼自己的实践能力更重要，论文只是锦上添花。                                                                </p>
+<p>二、加入社团为我提供了跨领域交流碰撞的平台</p>
+<p>回首大学四年，我最感激的就是加入了大学生软件创新创业中心，结识了许多才华横溢的朋友。在这里，每个人都有自己擅长的领域，从开发到算法，从硬件到人工智能，从游戏到摄影，种类繁多。与这些朋友的交流和合作，使我能在自己不熟悉的领域中快速学习和成长。他们的知识和经验对我来说是无价的财富，每当我遇到挑战或需要新的见解时，总能从他们那里得到启发和帮助。这种跨领域的互动和学习经历极大地拓宽了我的视野，加深了我对各个专业领域的理解和尊重。</p>
+<p>三、这些话，送给你也写给我，愿它点亮我们的生涯道路</p>
+<p>静下心来，不要被周围浮躁的环境所影响，按部就班地实现自己的目标。在保研方面，应当多尝试参加夏令营和预推免，可以通过研控网等平台寻找导师的评价，尽早行动以获取更多的机会。我是去年八月份联系上我现在的研究生导师的，但他今年的名额在六月份就已被其他学生开始预定了，好的导师总是非常抢手的。最后，我祝愿每位学弟学妹都能顺利实现自己的目标。</p>
+<h2 id="林锦东"><a href="#林锦东" class="headerlink" title="林锦东"></a><div align="center"><strong>林锦东</strong></div></h2><div align="center">2020级计算机科学与技术1班</div>
+<p>
+<div align="center"> <img width="150px" src= "/img/loading.gif" data-src="../images/ljd.jpg" href=""/></div>
+
+<p>林锦东，就读于北京邮电大学。本科在校期间，曾任河北大学易班学生工作站技术开发部部长、河北大学易班学生工作站站长，程序设计训练营负责人；曾获校特等奖学金，校三好学生、优秀学生干部等荣誉；曾获中国大学生计算机设计大赛软件应用与开发组国家三等奖、中国高校计算机大赛团体程序设计天梯赛国家三等奖、美国大学生数学建模竞赛国际二等奖、河北省大学生程序设计竞赛二等奖等。现推免至北京邮电大学计算机学院。</p>
+<p>一、知不足而奋进，望远山而前行</p>
+<p>对于日常时间安排，我一直觉得自己天赋一般，但坚信勤奋能够弥补不足。因此，我几乎每天都从早到晚学习，日常生活围绕宿舍、食堂、图书馆和教室展开（偶尔也会去操场）。我有较强的计划性，通常在学期初或长假开始时就会安排好每天的学习任务，并严格按照计划执行。</p>
+<p>在学习技巧和习惯方面，我相信每个人都有适合自己的提高效率的方法。我倾向于制定计划并严格执行，平时会用思维导图来帮助复习，同时掌握更多信息也是必要的。例如，了解必修课的平时分获取方法，可以向老师请教；期末考试的内容可以向学长学姐请教，这样能高效复习。</p>
+<p>在从大一到大四上顺利推免，我们需要做到兼顾专业课和竞赛。首先，大一是必修绩点占比重最大的一年，为保研路线定下了基调。因此，在这一年我重点是放在必修课的学习上，冲绩点，然后抽时间去学课外的比如开发、算法竞赛方面要学的知识。到了大二，必修课门数较少，课内压力就减少了许多，在花差不多的时间处理课内事务的同时，我大部分的时间基本是用来学课外的知识，然后参加竞赛来多获取保研的创新实践加分。因此，可以看到我的竞赛获奖几乎都是2022年的，竞赛加分也在那时候就加满了，这样就减少了在大三时候的综测压力。最后是大三，这一年的必修课主要以硬核著称，主要体现在大三上的期末考试难度比较大上，是可以算是用来弯道超车的一个学期。由于我的竞赛加分在大二时候已经加满，所以我在大三上学期花了比较多的时间在必修课上。当然，我也会抽时间去进一步提升自己的课外硬实力，比如科研能力，特别是在大三下的时候。此外，需要特别说的是，科研能力在保研阶段外校看重的占比是非常非常大的，远远高于竞赛。所以，若是竞赛分都加满了，课内必修绩点也无需担忧的情况下建议多参与科研，如果出论文成果啥了那收益是极大的。</p>
+<p>二、胆大、积极为我保研阶段提供制胜契机</p>
+<p>曾经有同学问过我你认为自己可以成功的保研的关键是什么？对此我想说一是勤奋，第二就是胆大、积极，我觉得这是我在保研阶段（夏令营-九推）致胜的最为关键的因素，主要是针对联系导师上。划好自己大概想上什么样的院校之后，怀着不想最后没学上的满满求生欲，我是给不同院校、不同老师发了有一定数量的邮件，最后才换来了几个考核/可能给推荐入“营”的机会。我个人觉得像我这种不是专业第一，又没有很好的科研成果的“非92”选手其实要上个“中九”以上的院校或者跟一个比较好的导师只能是从导师话语权大的院校多找机会。以及，我觉得不能因为自己什么好的科研成果也没有就不去联系导师，只要联系了，其实就是增大了我们进入更好的去处的机会，所以要多积极、胆子大地去联系。</p>
+<p>三、寄语</p>
+<p>我一直告诉自己：“不要觉得自己的天赋不如别人，就想着努力还有什么意义。有的人天赋真的很高，他们随随便便踏出一步就比你踏出好几步来的远，但是你也没有必要跟那些天赋高的硬比，只要你找对方向，努力了，哪怕只是让自己跟天赋高的人之间的差距拉开的更慢也是有意义的，当然，也可能是超越。”现在，我把这句话送给大家。我一直相信勤能补拙，多付出一点努力，就总会有收获胜利果实的时候，也有位努力的人曾经告诉我：“那段努力却又没有收获的日子叫做扎根。”</p>
+<h2 id="华征豪"><a href="#华征豪" class="headerlink" title="华征豪"></a><div align="center"><strong>华征豪</strong></div></h2><div align="center">2020级人工智能2班</div>
+<p>
+<div align="center"> <img width="150px" src= "/img/loading.gif" data-src="../images/hzh.jpeg" href=""/></div>
+
+<p>华征豪，2002年生，江苏苏州人，现就读于山东大学。<br>美国《时代周刊》2006年度风云人物<br>《感动中国》2008年度人物<br>联合国2019年度“地球卫士奖”联合获奖人<br>国际奥委会2022年”奥林匹克奖杯“获奖者</p>
+<p>算法的旅程既充满挑战也满载机遇。在这里，每一次的代码调试、每一次的算法优化，都是你们智慧的火花，也是成长的脚步。保持好奇心，勇于探索未知，用你们的智慧和热情去解锁算法的奥秘。未来的道路上，愿你们不断前行，不仅成为技术的驾驭者，更是创新的引领者。加油，你们的未来无限光明！</p>
+<h2 id="赵苗苗"><a href="#赵苗苗" class="headerlink" title="赵苗苗"></a><div align="center"><strong>赵苗苗</strong></div></h2><div align="center">2020级计算机科学与技术2班</div>
+<p>
+<div align="center"> <img width="150px" src= "/img/loading.gif" data-src="../images/zmm.jpg" href=""/></div>
+
+
+<p>一、坚守热爱，坚定前行<br>明确我们踏上学习之旅的初衷，或是出于对学分的追求，或是对编程技术的浓厚兴趣，还是受到周围环境的引领，这份选择都是人生旅程中的一个重要节点。时刻铭记自己为何踏上这条道路，将这份初衷转化为不懈追求的动力，持之以恒地付出努力。<br>二、注重实践，磨砺技能<br>在掌握基础知识之后，积极拥抱实践，将所学融入各类项目与挑战之中。无论是课程项目的深入参与，还是开源社区的积极贡献，都是锻炼我们编程技艺、提升问题解决能力的宝贵机会。从基础逻辑的构建到复杂系统的设计，每一次实践都是对自我能力的一次飞跃，在实践中积累经验、精进技能。<br>三、强化沟通，共筑智慧<br>在探索算法奥秘、攻克项目难题或紧跟技术前沿的过程中，加强与同学们之间的沟通交流，分享解题思路，倾听不同观点，从而拓宽我们的视野，激发新的灵感。沟通是理解的桥梁，帮助我们跨越认知的鸿沟，从多角度审视问题，从而弥补自身的不足，更加全面而深刻地理解和知识。</p>
+<h2 id="葛政骅"><a href="#葛政骅" class="headerlink" title="葛政骅"></a><div align="center"><strong>葛政骅</strong></div></h2><div align="center">2020级计算机科学与技术1班</div>
+<p>
+<div align="center"> <img width="150px" src= "/img/loading.gif" data-src="../images/gzh.jpg" href=""/></div>
+
+<p>一、明确出发点</p>
+<p>首先就是明确自己的目标，可能是为了学分，可能是出于兴趣，也可能是随波逐流。但无论是什么原因选择加入训练营，时刻提醒自己学下去的理由，并将其转化为相匹配的动力，付出相对应的努力，给自己一个满意的结果。<br>然后是放平心态，不要急于求成，算法设计能力没办法一蹴而就，更没办法通过死记硬背就能得来，所以没必要打卡似的每周做题，背答案，和别人比进度之类的，重要的是自己能够理清并掌握每道题的思路和考点，确保自己再遇到相似的题目时能有切入点。</p>
+<p>二、找到自己的方法</p>
+<p>其次是找到一条适合自己的学习方法和路径。就我个人观点，如果大家是为了比赛出好成绩，我觉得应该在掌握一些基础知识之后，针对不同赛事对自己的学习方向进行规划调整，有选择性的刷题并进行归纳总结。不同的赛事的题目风格和考察知识范围差距还是蛮大的。</p>
+<p>三、多交流多学习</p>
+<p>最后就是多和他人交流并互相学习。算法题大多没有唯一解，每个人的解法或多或少都会存在差异。研究别人的代码，有助于帮自己拓宽视野，打破自己的思路桎梏。</p>
+<h2 id="韩墨霖"><a href="#韩墨霖" class="headerlink" title="韩墨霖"></a><div align="center"><strong>韩墨霖</strong></div></h2><div align="center">2020级计算机科学与技术2班</div>
+<p>
+<div align="center"> <img width="150px" src= "/img/loading.gif" data-src="../images/hml.jpg" href=""/></div>
+
+<p>计算机科学是一个日新月异的领域，新技术、新框架层出不穷，在学习的过程中一定要保持学习的的热情和动力，学习新技术，不断提升自己的竞争力。程序不能只局限于看懂，在掌握理论知识的同时，更要注重实践应用。通过参与项目、解决实际问题来巩固所学知识，提升自己的编程能力。</p>
+<p>其次，在编程过程中，遇到问题是常态，我们可以利用各种方法去找到我们想要解决的问题的答案，但是更重要的是要学会如何分析问题，运用所学知识去给出合理的解决方案，尝试从不同角度思考，逐步培养自己的问题解决能力，在成功解决问题之后也要善于总结，不断提升自己的专业能力和综合素质。</p>
+<p>在学习的过程中，我们也可以找到自己的学习搭子，及时分享自己了解信息和进展，学会与他人有效沟通、协作完成任务，可以很好的敦促我们完成自己的学习目标，相互鼓励，共同进步。<br>最后，要关注自己的职业规划，明确自己的职业目标和发展方向，制定切实可行的计划并付诸实践。</p>
+<h2 id="吴金硕"><a href="#吴金硕" class="headerlink" title="吴金硕"></a><div align="center"><strong>吴金硕</strong></div></h2><div align="center">2020级计算机科学与技术2班</div>
+<p>
+<div align="center"> <img width="150px" src= "/img/loading.gif" data-src="../images/wjs.jpg" href=""/></div>
+
+<p>吴金硕，目前就职于互联网公司，从事前端开发工作。本科在校期间，曾在BAT大厂进行实习。</p>
+<p>1.学习策略与注意事项</p>
+<p>作为一名计算机专业的学生，首要任务是建立扎实的基础知识。这意味着要重视数学（如离散数学、线性代数等）、算法和数据结构等核心课程的学习，这些是后续深入学习的基石。同时，尽早开始编程实践，从简单的项目开始，逐渐过渡到复杂的项目。熟悉至少一种主流编程语言（如Python、Java、C++等），并通过参与学校的编程社团或加入在线技术社区（如GitHub、Stack Overflow）与他人交流学习心得，这有助于你建立人脉网络。此外，参加ACM编程竞赛、Hackathon等活动，不仅可以提高解决问题的能力，还能增加简历亮点。通过这些方式，你可以在大学期间构建起坚实的技术基础。</p>
+<p>2.职业规划与发展</p>
+<p>在规划未来的职业道路时，首先要明确自己的目标是继续深造还是直接进入职场。如果计划继续读研或博士，那么要提前准备相关的研究工作；如果打算直接就业，则要更加注重实际项目的积累。无论哪种选择，都需要不断学习和提升自己的技能。除此之外，还需要培养良好的沟通能力、团队合作精神和解决问题的能力等软技能。通过实习经历积累实际工作经验，对于职业发展尤为重要。</p>
+<p>3.进入互联网行业的准备</p>
+<p>为了更好地进入互联网行业，你需要构建自己的技能树，根据不同的职业路径（如软件开发、前端开发、数据分析等）选择合适的技术栈。积累实际项目经验，可以通过开源项目贡献代码、自己搭建网站等方式来丰富自己的作品集。同时，积极参加行业活动，拓展职业网络，了解行业最新动态。由于互联网行业发展迅速，需要保持好奇心，不断学习新技术和新方法，以适应快速变化的技术环境。准备好面对挑战，灵活调整自己的发展方向，以便在未来的职业道路上取得成功。</p>
+<h1 id="第八届程序设计训练营"><a href="#第八届程序设计训练营" class="headerlink" title="第八届程序设计训练营"></a><div align="center"><strong>第八届程序设计训练营</strong></div></h1><div align="center"> <img src= "/img/loading.gif" data-src="../images/no8hezhao.jpg" href=""/></div>
+
+
+<h2 id="蒋志宇"><a href="#蒋志宇" class="headerlink" title="蒋志宇"></a><div align="center"><strong>蒋志宇</strong></div></h2><div align="center">2021级计算机科学与技术1班</div>
+<p>
+<div align="center"> <img width="150px" src= "/img/loading.gif" data-src="../images/jzy.jpg" href=""/></div>
+
+
+
+
+<p>蒋志宇，就读于北京邮电大学。2023年河北大学程序设计训练营总负责人。获得中国高校计算机大赛（天梯赛）国家二等奖，河北省大学生程序设计竞赛省级一等奖，美国大学生数学建模竞赛    Honorable    Mention，中国大学生计算机设计大赛    省级二等奖，CCF    CSP计算机软件能力认证240分（单次前5.99%）。</p>
+<p>​        亲爱的学弟学妹们，大家好，一转眼，我也是一名即将毕业的大四老学长了。曾经，我照着学长们留下的脚印，一步步走到了现在，少走了很多弯路，现在，我也将留下我的路，供大家分析。</p>
+<p>​        起初我觉得计算机好就业，于是我在第一年新高考的96个志愿中，填了91个，91个计算机，我想在这个专业做出一些东西，一些成就。于是在上了大学后，我开始按着学校给的路子走，学习c语言，做算法题，我发现这个过程很有意思，于是参加了咱学院的程序设计训练营，在这里我觉得不仅能学到竞赛的知识，更重要的是认识了一些特别有能力的学长学姐，还有特别努力学习的同学。正如罗老师所说，办程序设计训练营，罗老师不会得到任何好处，但她希望来这里的同学能借助这个平台，学到更好的知识，培养更好的学习习惯，认识一些志同道合的好朋友，一起努力朝着更好的自己，更好的未来而努力。</p>
+<p>​        从大一的迷茫到学习算法，大二打算法比赛，大三面对未来的迷茫，担心找不到工作，又去学了一点开发，大四保研了又开始学科研，我一直在改变自己的路，我也没办法做到每一步都走得正确，只能不断思考，试错，改正。其实这一路走来，最多的感受就是：在前进的路上，就好像小马过河，有人会说过河很简单，但有人会觉得很难，但我觉得，这条到底适不适合你，只有你走过才能知道。所以学弟学妹们，希望你们能坚持自己想做的事情，哪怕可能会面临失败，但是你们还年轻，一定要坚持下去，做自己喜欢的事情，培养自己的能力，多学一些知识，多参加一些竞赛，最终成为一个可堪重用的人。</p>
+<p>寄语：</p>
+<p>​        希望大家能珍惜大学的时光，想保研的同学，就把课程好好学学，多参加竞赛拿到加分。想找工作的同学，就好好学习技能，多参加实习，增长经验，无论你想做什么，都要好好了解，然后去努力学习。人生的路无所谓好或不好，但希望大家都能得偿所愿，祝好。</p>
+<h2 id="张子健"><a href="#张子健" class="headerlink" title="张子健"></a><div align="center"><strong>张子健</strong></div></h2><div align="center">2021级信息安全2班</div>
+<p>
+<div align="center"> <img width="150px" src= "/img/loading.gif" data-src="../images/zzj.jpg" href=""/></div>
+
+
+
+<p>张子健，已保研至北京邮电大学网安学院。荣誉方面，曾获得河北省三好学生，河北大学特等奖学金等；竞赛方面，曾获得第七届河北省ccpc一等奖，第十四届蓝桥杯全国软件和信息技术专业人才大赛全国总决赛C/C++程序设计大学A组三等奖，2024年美国大学生数学建模M奖等。</p>
+<p>一、懵懂开篇，探寻方向<br>        踏入大学校园的那一刻，崭新的世界在我眼前徐徐展开，心中满是对未知的憧憬与好奇。然而，陌生的环境、多元的选择，让初来乍到的我陷入了迷茫的泥沼。课程体系繁杂，社交圈子陌生，一时间，我仿佛失去了前行的坐标。<br>幸运的是，在与舍友促膝长谈、向导师虚心求教后，我渐渐拨开迷雾。我意识到，与其在迷茫中徘徊，不如立足当下，脚踏实地地迈出每一步。把眼前的课程学好，把身边的小事做好，说不定就能在不经意间积攒起应对未来挑战的力量。</p>
+<p>二、调整心态，多元成长<br>        心态摆正后，我深知专业学习是大学的基石。课堂上，我全神贯注地聆听教授们的讲解，课后一头扎进图书馆，钻研专业书籍，力求吃透每一个知识点。但我也明白，大学绝不仅仅是知识的单向输入，更是综合素质的培养皿。<br>        出于对网络安全的热爱，我加入了慧河工作室，与志同道合的伙伴们学习网络安全技能；凭借一腔热忱，我投身于志愿者活动，在疫情期间为同学们送去温暖。我坚信，兴趣引领下的成长最为珍贵，在这个过程中，我的表达能力、同理心都得到了极大的滋养，还结识了一群挚友，那些一起奋斗、欢笑的日子，成为了我记忆中的珍宝。<br>        随着学期更迭，优异的学业成绩让我看到了保研的曙光。详细了解学院政策后，我锚定了这个目标。大二大三期间，我在专业学习上丝毫不敢懈怠，同时主动投身科研项目，参与学科竞赛。从熬夜参加数学建模比赛，到在算法网站上反复刷题，每一步都走得艰辛却坚定。这些实战经历，让我将理论知识融会贯通，也为未来的学术之路铺就了坚实的砖石。<br>        保研征程中，夏令营与预推免是关键战场，考查内容涵盖科研、专业、算法、英语等诸多维度。我广泛搜罗资料、研读学长学姐的经验贴，制定了详细的复习计划。此外，深知面试时间有限，为了让导师更全面了解自己，我提前与心仪导师取得联系，真诚沟通研究兴趣与规划。导师的悉心指导与认可，成为我最终斩获理想 offer 的强大助力。</p>
+<p>三、这些话，送给你也写给我，愿它点亮我们的生涯道路<br>        回首大学时光，有过迷茫，有过挫折，但更多的是成长与收获。“千磨万击还坚劲，任尔东西南北风”在逐梦路上，要允许自己试错，接纳不完美的结果，因为每一次跌倒都是成长的契机，每一次挫折都是蜕变的前奏。<br>        年轻赋予我们无畏的资本，怀揣敬畏之心，勇敢地去闯荡、去拼搏。无论风雨如何肆虐，只要坚定信念，砥砺前行，终能穿越阴霾，抵达鲜花盛开的彼岸。愿我们都能带着勇气与希望，书写属于自己的辉煌篇章，让青春在奋斗中熠熠生辉！</p>
+<h2 id="王利航"><a href="#王利航" class="headerlink" title="王利航"></a><div align="center"><strong>王利航</strong></div></h2><div align="center">2021级信息安全1班</div>
+<p>
+<div align="center"> <img width="150px" src= "/img/loading.gif" data-src="../images/wlh.jpg" href=""/></div>
+
+
+
+<p>王利航，目前就读于北京交通大学。</p>
+<p>一、以算法为剑，磨砺思维之锋算法学习是一条既枯燥又充满惊喜的道路。初学时可能会感到迷茫和吃力，但只要坚持下去，就会在一次次调试与提交中逐渐建立起对逻辑、抽象与建模的深刻理解。建议大家不要急于求成，打好基础比一时的题量更重要。学习算法时“思维方式”远比“技巧”更值得投入时间。建议从基础算法模板入手，逐步过渡到更综合的专题。每次做题，不要止于“AC”，而应深入反思解法的设计思路与复杂度分析。多参与比赛，不只是为了排名，更是为了锻炼在压力下冷静分析的能力。和队友配合、赛后复盘的过程，本身就是一次又一次极具价值的成长。</p>
+<p>二、以目标为灯，规划长远之路如果你有保研的打算，算法能力将成为你学业成绩之外的一项重要优势。尤其是在申请人工智能、计算机相关方向时，一段扎实的算法训练背景，可以显著提升你的综合素质和面试表现。尽早明确目标，在大一大二期间就开始积累。课内维持良好绩点，课外参加数学建模、ACM竞赛、蓝桥杯等活动，丰富履历的同时，也培养了解决复杂问题的能力。在规划过程中不要盲目跟风，适合自己的发展路径才是最优解。多与老师、学长沟通，结合自身兴趣和能力做出判断，制定出切实可行的计划，并持续执行。</p>
+<h2 id="陈聪"><a href="#陈聪" class="headerlink" title="陈聪"></a><div align="center"><strong>陈聪</strong></div></h2><div align="center">2021级计算机科学与技术2班</div>
+<p>
+<div align="center"> <img width="150px" src= "/img/loading.gif" data-src="../images/cc.jpg" href=""/></div>
+
+
+
+<p>陈聪，目前就读于西安电子科技大学。获得2023年中国高校计算机设计大赛国家二等奖，2023年蓝桥杯省级大赛二等奖，2023年河北省程序设计竞赛二等奖等。<br>一、明确目标，逐梦未来<br>        在大学中，确定好目标是一件非常重要的事情。一个好的目标能指引着你不断前进，不论是保研抑或是工作，提前针对自己的兴趣去决定未来的规划是十分必要且紧迫的！<br>二、注重实践<br>        大学的学习很多都是书本上/网课的知识汲取，并没有实际深入到底层去理解。在大家学习算法的时候，不应该只是停留在视频课、知识点上的探索，针对很多原理应该去动手动笔进行详细演算，这样才能理清算法背后的逻辑与思想。<br>三、展望<br>        大学的四年，实际上是飞快的。无论最后的结果如何，希望大家在追逐梦想的过程中，能够体会到其中的辛酸苦楚与丰硕成果。最后，祝大家有志者事竟成。</p>
+<h2 id="刘雨婷"><a href="#刘雨婷" class="headerlink" title="刘雨婷"></a><div align="center"><strong>刘雨婷</strong></div></h2><div align="center">2021级计算机科学与技术1班</div>
+<p>
+<div align="center"> <img width="150px" src= "/img/loading.gif" data-src="../images/lyt.jpg" href=""/></div>
+
+
+
+<p>刘雨婷，目前就职于智慧农业互联网公司，从事全栈开发工作。<br>一、明确目标，保持动力<br>        无论是为了提升技术能力、完成竞赛项目，还是为职业发展铺路，找到属于你的目标。学习中遇到瓶颈时，不妨回想加入训练营的初心，将这份动力转化为每日具体的行动。专注自己的节奏，踏实进步比盲目追赶更有意义。</p>
+<p>二、在实践中提升技能<br>        编程能力的提升离不开动手实践。在掌握基础后，尝试通过课程项目、竞赛真题或实际案例应用知识。从调试一段代码到完成完整项目，每一次实践都能暴露问题、巩固理解。记住：解决问题的能力，只能在解决问题的过程中培养。</p>
+<p>三、积极交流，共同成长<br>        遇到难题时，主动与同学讨论思路，分享学习资源。组队完成项目、互相评审代码、交流技术趋势——合作不仅能突破个人思维的局限，还能在团队中培养沟通与协作能力，这些正是未来职场的关键竞争力。</p>
+<h2 id="果家旭"><a href="#果家旭" class="headerlink" title="果家旭"></a><div align="center"><strong>果家旭</strong></div></h2><div align="center">2021级人工智能1班</div>
+<p>
+<div align="center"> <img width="150px" src= "/img/loading.gif" data-src="../images/gjx.jpg" href=""/></div>
+
+
+
+<p>目前工作于苏州华为研究所，主要工作围绕嵌入式开发，2021年河北大学程序设计训练营负责人，曾参与多次竞赛。</p>
+<p>2023-2024学年获得中国高校计算机大赛程序设计天梯赛国家级二等奖；</p>
+<p>2022-2023学年获得中国高校计算机大赛程序设计天梯赛省级二等奖；</p>
+<p>2023-2024学年获得中国计算机设计大赛国家级三等奖；</p>
+<p>2023-2024学年获得计算机系统能力大赛国家级三等奖；</p>
+<p>2022-2023学年获得计算机系统能力大赛国家级三等奖；</p>
+<p>2024-2025学年获得蓝桥杯省级二等奖；</p>
+<p>2024-2025学年获得中国大学生程序设计竞赛河北赛区银牌。</p>
+<p>一、 建立扎实基础，深入学习并掌握一套技术栈</p>
+<p>我始终认为编程不是魔术，它是一门建立在严谨逻辑和基础知识之上的手艺。忽视基础，就像在沙地上盖楼，无论上层建筑看起来多华丽，都难以经受风雨和考验。框架、工具层出不穷（今年流行React，明年可能Vue又出新版本），但计算机的基础（数据结构、算法、操作系统、网络）变化缓慢。掌握了底层原理，你就能以不变应万变，快速理解和上手任何新技术。当遇到一个诡异的Bug时，基础扎实的人能像侦探一样，从内存、网络协议、事件循环等底层机制推理出问题根源。而基础薄弱的人只能盲目地“百度”、“Ctrl+C/V”解决方案，耗时耗力且下次还会遇到。写出能跑的代码很容易，写出高效、可扩展、易维护的代码很难。这需要你对数据如何组织、系统如何通信、资源如何调度有深刻的理解，这些都依赖于扎实的基础。而输入学习并掌握一套技术栈目的也不是让你们成为这个框架的‘粉丝’或‘奴隶’，而是希望通过这个‘样板间’，教会你们如何像工程师一样思考，如何系统地学习、如何深刻地解决问题。这套技术栈是你的第一个‘思维模型’和‘能力证明’。它将成为你简历上最硬的亮点，面试时最足的底气，以及未来职业生涯中，无论风雨如何变幻，都能让你安身立命的真本事。 </p>
+<p>二、 永远不要轻言放弃</p>
+<p>回想我的大学生活，可以说充满了“传奇色彩”。我曾担任2023届学生会主席，积极参与各类学术竞赛，收获过不少成功，也经历过许多失败。比如，为保研努力准备了整整三年，却最终以一名之差失之交臂；又比如，为考研彻夜苦读三个月，结果以几分之差名落孙山。说实话，人生有时就像一场豪赌，而我一直是输的那方。还记得保研结果公布那天，几乎所有的好朋友都不敢联系我，怕我难过；考研成绩出来时，同样没有人敢轻易问我，生怕听到不好的消息。经历了两次巨大失败的我，在大四下开学之际选择用一个月时间专心完成毕业论文，在临近毕业时独自踏上了一场毕业旅行。那是我释放压抑已久自我的方式，也是一次与自己的和解。归来后，我收拾心情，回到学校，重新投入投简历、准备面试的节奏中。因为我知道，无论遇到多少挫折，人生的路始终要继续向前。索性在毕业前夕，收获了很多还算不错的offer，条条大路通罗马，但是坚持是这条成功路上必不可需的品质，也希望我的经历可以让很多现在经历失败的学弟学妹们鼓起信心，继续努力下去。</p>
+<p><a href="https://hbuacm.github.io/sticky-notes/">前往留言板</a></p>
+</div><hr><div id="post-comment"><div class="comment_headling"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="gitalk-container"></div><script>var gitalk = new Gitalk({
+  clientID: '10d68cea9de0fd657363',
+  clientSecret: '85f2367b6b4481a4d6231dee16575344c90c8da0',
+  repo: 'HBUACM.github.io',
+  owner: 'HBUACM',
+  admin: ['HANXU2018'],
+  id: md5(decodeURI(location.pathname)),
+  language: 'zh-CN',
+  perPage: 10,
+  distractionFreeMode: false,
+  pagerDirection: 'last',
+  createIssueManually: false,
+  updateCountCallback: commentCount
+})
+gitalk.render('gitalk-container')
+
+function commentCount(n){
+  try {
+    document.getElementsByClassName('gitalk-comment-count')[0].innerHTML= n
+  } catch (e) {
+    return false
+  }
+}</script></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">HBU</div><div class="author-info__description">2024河北大学程序设计训练营</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">351</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">151</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">分类</div><div class="length_num">74</div></a></div></div><div class="card-info-bookmark is-center"><button class="button--animated" id="bookmark-it" title="加入书签"><i class="fas fa-bookmark"></i><span>加入书签</span></button></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/hbuacm" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1076998404@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.nowcoder.com/study/live/425" target="_blank" title="nowcode"><i class="fab fa-youtube-play"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">2023暑假知行进阶营开始招生啦! </br>QQ群号码 2023暑假知行进阶营:875104634</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/2025/01/14/2025%E5%AF%92%E5%81%87%E6%96%B0%E7%94%9F%E8%90%A5%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%AE%AD%E7%BB%83/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="/images/tran1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" title="2025寒假新生营第一次训练" alt="2025寒假新生营第一次训练"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2025/01/14/2025%E5%AF%92%E5%81%87%E6%96%B0%E7%94%9F%E8%90%A5%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%AE%AD%E7%BB%83/" title="2025寒假新生营第一次训练">2025寒假新生营第一次训练</div><time class="aside-post_meta post-meta__date" title="发表于 2025-01-14 20:00:00">2025-01-14</time></div></a></div><div class="aside-recent-post"><a href="/2025/01/11/2025%E5%AF%92%E5%81%87%E6%96%B0%E7%94%9F%E8%90%A5%E5%BC%80%E8%90%A5%E6%B5%8B%E8%AF%95/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="/images/2025%E5%AF%92%E5%81%87%E8%AE%AD%E7%BB%83%E8%90%A5%E5%BC%80%E8%90%A5%E6%B5%8B%E8%AF%95.png" onerror="this.onerror=null;this.src='/img/404.jpg'" title="2025寒假新生营开营测试" alt="2025寒假新生营开营测试"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2025/01/11/2025%E5%AF%92%E5%81%87%E6%96%B0%E7%94%9F%E8%90%A5%E5%BC%80%E8%90%A5%E6%B5%8B%E8%AF%95/" title="2025寒假新生营开营测试">2025寒假新生营开营测试</div><time class="aside-post_meta post-meta__date" title="发表于 2025-01-11 21:30:00">2025-01-11</time></div></a></div><div class="aside-recent-post"><a href="/2024/08/10/2024%E6%9A%91%E5%81%87%E8%AE%AD%E7%BB%83week3/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="/images/week3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="2024暑假知行进阶营第三周题解" alt="2024暑假知行进阶营第三周题解"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2024/08/10/2024%E6%9A%91%E5%81%87%E8%AE%AD%E7%BB%83week3/" title="2024暑假知行进阶营第三周题解">2024暑假知行进阶营第三周题解</div><time class="aside-post_meta post-meta__date" title="发表于 2024-08-10 21:30:00">2024-08-10</time></div></a></div><div class="aside-recent-post"><a href="/2024/08/03/2024%E6%9A%91%E5%81%87%E8%AE%AD%E7%BB%83week2/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="/images/week2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" title="2024暑假知行进阶营第二周题解" alt="2024暑假知行进阶营第二周题解"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2024/08/03/2024%E6%9A%91%E5%81%87%E8%AE%AD%E7%BB%83week2/" title="2024暑假知行进阶营第二周题解">2024暑假知行进阶营第二周题解</div><time class="aside-post_meta post-meta__date" title="发表于 2024-08-03 21:30:00">2024-08-03</time></div></a></div><div class="aside-recent-post"><a href="/2024/07/27/2024%E6%9A%91%E5%81%87%E8%AE%AD%E7%BB%83week1/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="/images/2022week1.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="2024暑假知行进阶营第一周题解" alt="2024暑假知行进阶营第一周题解"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2024/07/27/2024%E6%9A%91%E5%81%87%E8%AE%AD%E7%BB%83week1/" title="2024暑假知行进阶营第一周题解">2024暑假知行进阶营第一周题解</div><time class="aside-post_meta post-meta__date" title="发表于 2024-07-27 21:30:00">2024-07-27</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/2020%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/"><span class="card-category-list-name">2020程序设计训练营</span><span class="card-category-list-count">34</span></a></li><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/2020%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/%E7%AC%AC0%E5%91%A8-c-stl/"><span class="card-category-list-name">第0周 c++ stl</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/2020%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/%E7%AC%AC1%E5%91%A8-%E5%88%9D%E7%BA%A7%E7%AE%97%E6%B3%95/"><span class="card-category-list-name">第1周 初级算法</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/2020%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/%E7%AC%AC2%E5%91%A8-%E6%95%B0%E5%AD%A6%E6%A8%A1%E6%8B%9F/"><span class="card-category-list-name">第2周 数学模拟</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/2020%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/%E7%AC%AC3%E5%91%A8-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"><span class="card-category-list-name">第3周 动态规划</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/2020%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/%E7%AC%AC4%E5%91%A8-%E5%9B%BE/"><span class="card-category-list-name">第4周 图</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/2020%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/%E7%AC%AC4%E5%91%A8-%E6%A0%91/"><span class="card-category-list-name">第4周 树</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/2020%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/%E7%AC%AC5%E5%91%A8-%E5%9B%BE/"><span class="card-category-list-name">第5周 图</span><span class="card-category-list-count">1</span></a></li></ul>
+            <li class="card-category-list-item more is-center"><a class="card-category-list-link-more" href="/categories">
+                <span>查看更多</span><i class="fas fa-angle-right"></i></a></li>           
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%9D%82%E7%B3%85/" style="font-size: 22px; color: #99a9bf">-杂糅</a> <a href="/tags/%E6%A0%88/" style="font-size: 20px; color: #99a4b2">-栈</a> <a href="/tags/%E6%A0%88-%E9%98%9F%E5%88%97/" style="font-size: 16px; color: #999">-栈 队列</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 16px; color: #999">-链表</a> <a href="/tags/%E9%98%9F%E5%88%97/" style="font-size: 18px; color: #999ea6">-队列</a> <a href="/tags/1-1-%E4%BA%A4%E6%8D%A2%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 16px; color: #999">1-1 交换两个字符串</a> <a href="/tags/1-2-2017Final-%E5%9C%86%E5%91%A8%E7%8E%87%E5%B1%B1/" style="font-size: 16px; color: #999">1-2 2017Final 圆周率山</a> <a href="/tags/1-3-%E8%8B%B1%E6%96%87%E5%AD%97%E6%AF%8D/" style="font-size: 16px; color: #999">1-3 英文字母</a> <a href="/tags/1-4-%E7%BB%A9%E7%82%B9%E8%AE%A1%E7%AE%97/" style="font-size: 16px; color: #999">1-4 绩点计算</a> <a href="/tags/1-5-%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF/" style="font-size: 16px; color: #999">1-5 约瑟夫环</a> <a href="/tags/1-7-%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%8D%95%E9%93%BE%E8%A1%A8%E6%B1%82%E5%B7%AE%E9%9B%86/" style="font-size: 16px; color: #999">1-7 两个有序单链表求差集</a> <a href="/tags/7-1-%E4%B9%A6%E5%8F%B7%E5%88%A4%E6%96%AD%E4%B8%8E%E7%BA%A0%E9%94%99/" style="font-size: 16px; color: #999">7-1 书号判断与纠错</a> <a href="/tags/7-1-%E5%88%97%E5%87%BA%E5%8F%B6%E7%BB%93%E7%82%B9-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-1 列出叶结点 题解</a> <a href="/tags/7-1-%E5%AD%90%E9%9B%86%E5%92%8C%E9%97%AE%E9%A2%98-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-1 子集和问题 题解</a> <a href="/tags/7-1-%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E5%92%8C%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-1 最大公约数和最小公倍数 题解</a> <a href="/tags/7-1-%E6%B5%AA%E6%BC%AB%E4%BE%A7%E5%BD%B1-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-1 浪漫侧影 题解</a> <a href="/tags/7-2-h0039-%E5%B9%B3%E6%96%B9%E6%95%B0-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-2 h0039. 平方数 题解</a> <a href="/tags/7-2-%E5%8D%8A%E6%95%B0%E9%9B%86-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-2 半数集 题解</a> <a href="/tags/7-2-%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-2 完全二叉树的层序遍历 题解</a> <a href="/tags/7-2-%E5%B9%B6%E6%9F%A5%E9%9B%86%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-2 并查集【模板】 题解</a> <a href="/tags/7-3-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86%EF%BC%81%EF%BC%88%E7%AE%80%E5%8D%95%EF%BC%89-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-3 二叉树的遍历！（简单） 题解</a> <a href="/tags/7-3-%E6%89%BE%E9%9B%B6%E9%92%B1-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-3 找零钱 题解</a> <a href="/tags/7-3-%E7%B4%A0%E6%95%B0%E5%AF%B9%E7%8C%9C%E6%83%B3-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-3 素数对猜想 题解</a> <a href="/tags/7-3-%E9%83%A8%E8%90%BD-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-3 部落 题解</a> <a href="/tags/7-4-%E5%B7%A5%E4%BD%9C%E5%88%86%E9%85%8D%E9%97%AE%E9%A2%98-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-4 工作分配问题 题解</a> <a href="/tags/7-4-%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E4%B9%8BDijkstra-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-4 最短路径之Dijkstra 题解</a> <a href="/tags/7-4-%E8%BF%98%E5%8E%9F%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 16px; color: #999">7-4 还原二叉树</a> <a href="/tags/7-4-%E9%9B%86%E5%90%88%E7%9B%B8%E4%BC%BC%E5%BA%A6-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-4 集合相似度 题解</a> <a href="/tags/7-5-3824%E7%BB%8F%E5%85%B8%E6%B8%B8%E6%88%8F-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-5 3824经典游戏 题解</a> <a href="/tags/7-5-%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8/" style="font-size: 16px; color: #999">7-5 图的存储</a> <a href="/tags/7-5-%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95-Floyd-Warshall-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-5 最短路径算法(Floyd-Warshall) 题解</a> <a href="/tags/7-5-%E6%A0%91%E7%A7%8D%E7%BB%9F%E8%AE%A1-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-5 树种统计 题解</a> <a href="/tags/7-6-%E5%88%97%E5%87%BA%E8%BF%9E%E9%80%9A%E9%9B%86/" style="font-size: 16px; color: #999">7-6 列出连通集</a> <a href="/tags/7-6-%E5%93%88%E5%88%A9%C2%B7%E6%B3%A2%E7%89%B9%E7%9A%84%E8%80%83%E8%AF%95-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-6 哈利·波特的考试 题解</a> <a href="/tags/7-6-%E7%82%B9%E8%B5%9E%E7%8B%82%E9%AD%94-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-6 点赞狂魔 题解</a> <a href="/tags/7-7-%E5%85%AC%E8%B7%AF%E6%9D%91%E6%9D%91%E9%80%9A-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-7 公路村村通 题解</a> <a href="/tags/7-7-%E5%93%A5%E5%B0%BC%E6%96%AF%E5%A0%A1%E7%9A%84%E2%80%9C%E4%B8%83%E6%A1%A5%E9%97%AE%E9%A2%98%E2%80%9D/" style="font-size: 16px; color: #999">7-7 哥尼斯堡的“七桥问题”</a> <a href="/tags/7-7-%E5%A4%A9%E6%A2%AF%E8%B5%9B%E5%BA%A7%E4%BD%8D%E5%88%86%E9%85%8D-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-7 天梯赛座位分配 题解</a> <a href="/tags/7-8-%E6%97%85%E6%B8%B8%E8%A7%84%E5%88%92/" style="font-size: 16px; color: #999">7-8 旅游规划</a> <a href="/tags/A-B-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">A+B 题解</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">一月 2025</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">八月 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">七月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月 2023</span><span class="card-archive-list-count">13</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/08/"><span class="card-archive-list-date">八月 2022</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/07/"><span class="card-archive-list-date">七月 2022</span><span class="card-archive-list-count">42</span></a></li><li class="card-archive-list-item more is-center"><a class="card-archive-list-link-more" href="/archives">
+              <span>查看更多</span><i class="fas fa-angle-right"  ></i></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">351</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count">     </div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By HBU</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">繁</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/third-party/click_heart.js"></script><script src="/js/third-party/ClickShowText.js"></script></body></html>

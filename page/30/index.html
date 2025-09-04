@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HBUACM - 河北大学程序设计训练营</title><meta name="description" content="2024河北大学程序设计训练营"><meta name="author" content="HBU"><meta name="copyright" content="HBU"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://hbuacm.github.io/page/30/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="HBUACM"><meta property="og:url" content="http://hbuacm.github.io/page/30/"><meta property="og:site_name" content="HBUACM"><meta property="og:description" content="2024河北大学程序设计训练营"><meta property="og:image" content="http://hbuacm.github.io/img/avatar.png"><meta property="article:published_time" content="2025-09-04T14:32:28.089Z"><meta property="article:modified_time" content="2025-09-04T14:32:28.089Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"C++,二叉树,String,图,堆,栈,队列,头秃,AC,WA","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.1"></head><body><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">351</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">151</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">74</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/guestbook"><i class="fa-fw fas fa-message"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/images/Training_Camp_Cove.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">HBUACM</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/guestbook"><i class="fa-fw fas fa-message"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">HBUACM</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/hbuacm" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1076998404@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.nowcoder.com/study/live/425" target="_blank" title="nowcode"><i class="fab fa-youtube-play"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/01/24/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-6%E3%80%917-7-%E5%AE%B6%E5%BA%AD%E6%88%BF%E4%BA%A7%20/" title="【2021天梯赛训练-6】7-7 家庭房产">     <img class="post_bg" data-src="/images/2021.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【2021天梯赛训练-6】7-7 家庭房产"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/24/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-6%E3%80%917-7-%E5%AE%B6%E5%BA%AD%E6%88%BF%E4%BA%A7%20/" title="【2021天梯赛训练-6】7-7 家庭房产">【2021天梯赛训练-6】7-7 家庭房产</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021-01-24 13:38:45"><i class="far fa-calendar-alt"></i>2021-01-24</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/">2021程序设计训练营</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/2021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-6/">2021天梯赛训练-6</a></span></div><div class="content">给定每个人的家庭成员和其自己名下的房产，请你统计出每个家庭的人口数、人均房产面积及房产套数。
+输入格式：输入第一行给出一个正整数N（≤1000），随后N行，每行按下列格式给出一个人的房产：
+1编号 父 母 k 孩子1 ... 孩子k 房产套数 总面积
+
+其中编号是每个人独有的一个4位数的编号；父和母分别是该编号对应的这个人的父母的编号（如果已经过世，则显示-1）；k（0≤k≤5）是该人的子女的个数；孩子i是其子女的编号。
+输出格式：首先在第一行输出家庭个数（所有有亲属关系的人都属于同一个家庭）。随后按下列格式输出每个家庭的信息：
+1家庭成员的最小编号 家庭人口数 人均房产套数 人均房产面积
+
+其中人均值要求保留小数点后3位。家庭信息首先按人均面积降序输出，若有并列，则按成员编号的升序输出。
+输入样例：1234567891011106666 5551 5552 1 7777 1 1001234 5678 9012 1 0002 2 3008888 -1 -1 0 1 10002468 0001 0004 1 2222 1 5007777 6666 -1 0 2 3003721 -1 -1 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/01/24/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-6%E3%80%917-6-%E5%8F%A4%E9%A3%8E%E6%8E%92%E7%89%88/" title="【2021天梯赛训练-6】7-6 古风排版">     <img class="post_bg" data-src="/images/2021.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【2021天梯赛训练-6】7-6 古风排版"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/24/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-6%E3%80%917-6-%E5%8F%A4%E9%A3%8E%E6%8E%92%E7%89%88/" title="【2021天梯赛训练-6】7-6 古风排版">【2021天梯赛训练-6】7-6 古风排版</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021-01-24 13:30:25"><i class="far fa-calendar-alt"></i>2021-01-24</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/">2021程序设计训练营</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/2021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-6/">2021天梯赛训练-6</a></span></div><div class="content">中国的古人写文字，是从右向左竖向排版的。本题就请你编写程序，把一段文字按古风排版。
+输入格式：输入在第一行给出一个正整数N（&lt;100），是每一列的字符数。第二行给出一个长度不超过1000的非空字符串，以回车结束。
+输出格式：按古风格式排版给定的字符串，每列N个字符（除了最后一列可能不足N个）。
+输入样例1：124This is a test case
+
+输出样例1：1234asa Tst ihe tsi ce s
+
+思路：
+将字符串从右向左输出，每列n个
+可以首先计算一共输出多少列，将每一列需要输出的字符放进一个vector数组中
+
+
+代码：12345678910111213141516171819202122232425262728293031#include &lt;iostream&gt;#include &lt;vector&gt;using namespace std;constexpr int MAX_SIZE = 1001;int main() &#123;    int n;    cin &gt;&gt; n;    getchar();//清空回车，cin回车 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/01/24/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-5%E3%80%917-7-Left-pad/" title="【2021天梯赛训练-5】7-7 Left-pad">     <img class="post_bg" data-src="/images/2021.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【2021天梯赛训练-5】7-7 Left-pad"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/24/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-5%E3%80%917-7-Left-pad/" title="【2021天梯赛训练-5】7-7 Left-pad">【2021天梯赛训练-5】7-7 Left-pad</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021-01-24 13:30:25"><i class="far fa-calendar-alt"></i>2021-01-24</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/">2021程序设计训练营</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/2021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-5/">2021天梯赛训练-5</a></span></div><div class="content">根据新浪微博上的消息，有一位开发者不满NPM（Node Package Manager）的做法，收回了自己的开源代码，其中包括一个叫left-pad的模块，就是这个模块把javascript里面的React/Babel干瘫痪了。这是个什么样的模块？就是在字符串前填充一些东西到一定的长度。例如用*去填充字符串GPLT，使之长度为10，调用left-pad的结果就应该是******GPLT。Node社区曾经对left-pad紧急发布了一个替代，被严重吐槽。下面就请你来实现一下这个模块。
+输入格式：输入在第一行给出一个正整数N（≤104）和一个字符，分别是填充结果字符串的长度和用于填充的字符，中间以1个空格分开。第二行给出原始的非空字符串，以回车结束。
+输出格式：在一行中输出结果字符串。
+输入样例1：1215 _I love GPLT
+
+输出样例1：1____I love GPLT
+
+输入样例2：124 *this is a sample for cut
+
+输出样例2：1cut
+
+思路：
+不管输入字符串的长度与n值的大小关系，最终都是输出n个长度的字符串
+看样例：当n值大于输入字符串长度时， ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/01/24/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-5%E3%80%917-6-%E5%87%BA%E7%A7%9F/" title="【2021天梯赛训练-5】 7-6 出租">     <img class="post_bg" data-src="/images/2021.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【2021天梯赛训练-5】 7-6 出租"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/24/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-5%E3%80%917-6-%E5%87%BA%E7%A7%9F/" title="【2021天梯赛训练-5】 7-6 出租">【2021天梯赛训练-5】 7-6 出租</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021-01-24 13:18:36"><i class="far fa-calendar-alt"></i>2021-01-24</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/">2021程序设计训练营</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/2021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-5/">2021天梯赛训练-5</a></span></div><div class="content">  
+一时间网上一片求救声，急问这个怎么破。其实这段代码很简单，index数组就是arr数组的下标，index[0]=2 对应 arr[2]=1，index[1]=0 对应 arr[0]=8，index[2]=3 对应 arr[3]=0，以此类推…… 很容易得到电话号码是18013820100。
+本题要求你编写一个程序，为任何一个电话号码生成这段代码 —— 事实上，只要生成最前面两行就可以了，后面内容是不变的。
+输入格式：输入在一行中给出一个由11位数字组成的手机号码。
+输出格式：为输入的号码生成代码的前两行，其中arr中的数字必须按递减顺序给出。
+输入样例：118013820100
+
+输出样例：12int[] arr &#x3D; new int[]&#123;8,3,2,1,0&#125;;int[] index &#x3D; new int[]&#123;3,0,4,3,1,0,2,4,3,4,4&#125;;
+
+思路：
+arr数组中存的是号码中所有出现过的数字（只可能是0-9这10个数字），遍历一遍，存起来，再排个序。
+index数组中存的是号码中的数字出现在arr数组中的哪个 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/01/24/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-6%E3%80%917-5-%E7%82%B9%E8%B5%9E/" title="【2021天梯赛训练-6】 7-5 点赞">     <img class="post_bg" data-src="/images/2021.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【2021天梯赛训练-6】 7-5 点赞"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/24/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-6%E3%80%917-5-%E7%82%B9%E8%B5%9E/" title="【2021天梯赛训练-6】 7-5 点赞">【2021天梯赛训练-6】 7-5 点赞</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021-01-24 13:18:36"><i class="far fa-calendar-alt"></i>2021-01-24</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/">2021程序设计训练营</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/2021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-6/">2021天梯赛训练-6</a></span></div><div class="content">微博上有个“点赞”功能，你可以为你喜欢的博文点个赞表示支持。每篇博文都有一些刻画其特性的标签，而你点赞的博文的类型，也间接刻画了你的特性。本题就要求你写个程序，通过统计一个人点赞的纪录，分析这个人的特性。
+输入格式：输入在第一行给出一个正整数N（≤1000），是该用户点赞的博文数量。随后N行，每行给出一篇被其点赞的博文的特性描述，格式为“K F1⋯FK”，其中1≤K≤10，Fi（i=1,⋯,K）是特性标签的编号，我们将所有特性标签从1到1000编号。数字间以空格分隔。
+输出格式：统计所有被点赞的博文中最常出现的那个特性标签，在一行中输出它的编号和出现次数，数字间隔1个空格。如果有并列，则输出编号最大的那个。
+输入样例：1234543 889 233 25 100 3 233 2 734 3 73 889 22 233 123
+
+输出样例：1233 3
+
+思路：
+可设置int标记数组，索引即为标签编号，值为点赞次数
+
+代码：1234567891011121314151617181920212223242526272829#include &lt;iostream&gt;using nam ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/01/21/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-4%E3%80%917-6%20%E8%BE%93%E5%87%BAGPLT/" title="【2021天梯赛训练-4】7-6 输出GPLT">     <img class="post_bg" data-src="/images/2021.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【2021天梯赛训练-4】7-6 输出GPLT"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/21/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-4%E3%80%917-6%20%E8%BE%93%E5%87%BAGPLT/" title="【2021天梯赛训练-4】7-6 输出GPLT">【2021天梯赛训练-4】7-6 输出GPLT</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021-01-21 12:15:45"><i class="far fa-calendar-alt"></i>2021-01-21</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/">2021程序设计训练营</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/2021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-4/">2021天梯赛训练-4</a></span></div><div class="content">给定一个长度不超过10000的、仅由英文字母构成的字符串。请将字符重新调整顺序，按GPLTGPLT....这样的顺序输出，并忽略其它字符。当然，四种字符（不区分大小写）的个数不一定是一样多的，若某种字符已经输出完，则余下的字符仍按GPLT的顺序打印，直到所有字符都被输出。
+输入格式：输入在一行中给出一个长度不超过10000的、仅由英文字母构成的非空字符串。
+输出格式：在一行中按题目要求输出排序后的字符串。题目保证输出非空。
+输入样例 1：1pcTclnGloRgLrtLhgljkLhGFauPewSKgt
+
+输出样例 1：1GPLTGPLTGLTGLGLL
+
+思路：· transform函数定义 OutputIt transform( InputIt first1, InputIt last1, OutputIt d_first,UnaryOperation unary_op );
+参数1是InputIt的开始，参数2是InputIt的结尾，参数3是OutputIt的开始，参数4一般有两种①转成大写::toupper();②转成小写::tolower()。
+· 建立map记录’G’,’ ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/01/21/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-4%E3%80%917-10%20%E9%87%8D%E6%8E%92%E9%93%BE%E8%A1%A8/" title="【2021天梯赛训练-4】7-10 重排链表">     <img class="post_bg" data-src="/images/2021.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【2021天梯赛训练-4】7-10 重排链表"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/21/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-4%E3%80%917-10%20%E9%87%8D%E6%8E%92%E9%93%BE%E8%A1%A8/" title="【2021天梯赛训练-4】7-10 重排链表">【2021天梯赛训练-4】7-10 重排链表</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021-01-21 12:15:45"><i class="far fa-calendar-alt"></i>2021-01-21</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/">2021程序设计训练营</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/2021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-4/">2021天梯赛训练-4</a></span></div><div class="content">给定一个单链表 L1→L2→⋯→Ln−1→Ln，请编写程序将链表重新排列为 Ln→L1→Ln−1→L2→⋯。例如：给定L为1→2→3→4→5→6，则输出应该为6→1→5→2→4→3。
+输入格式：每个输入包含1个测试用例。每个测试用例第1行给出第1个结点的地址和结点总个数，即正整数N (≤105)。结点的地址是5位非负整数，NULL地址用−1表示。
+接下来有N行，每行格式为：
+1Address Data Next
+
+其中Address是结点地址；Data是该结点保存的数据，为不超过105的正整数；Next是下一结点的地址。题目保证给出的链表上至少有两个结点。
+输出格式：对每个测试用例，顺序输出重排后的结果链表，其上每个结点占一行，格式与输入相同。
+输入样例 ：123456700100 600000 4 9999900100 1 1230968237 6 -133218 3 0000099999 5 6823712309 2 33218
+
+输出样例 ：12345668237 6 0010000100 1 9999999999 5 1230912309 2 0000000000 4 3321 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/01/21/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-4%E3%80%917-8%20%E9%93%BE%E8%A1%A8%E5%8E%BB%E9%87%8D/" title="【2021天梯赛训练-4】7-8 链表去重">     <img class="post_bg" data-src="/images/2021.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【2021天梯赛训练-4】7-8 链表去重"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/21/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-4%E3%80%917-8%20%E9%93%BE%E8%A1%A8%E5%8E%BB%E9%87%8D/" title="【2021天梯赛训练-4】7-8 链表去重">【2021天梯赛训练-4】7-8 链表去重</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021-01-21 12:15:45"><i class="far fa-calendar-alt"></i>2021-01-21</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/">2021程序设计训练营</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/2021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-4/">2021天梯赛训练-4</a></span></div><div class="content">给定一个带整数键值的链表 L，你需要把其中绝对值重复的键值结点删掉。即对每个键值 K，只有第一个绝对值等于 K 的结点被保留。同时，所有被删除的结点须被保存在另一个链表上。例如给定 L 为 21→-15→-15→-7→15，你需要输出去重后的链表 21→-15→-7，还有被删除的链表 -15→15。
+输入格式：输入在第一行给出 L 的第一个结点的地址和一个正整数 N（≤105，为结点总数）。一个结点的地址是非负的 5 位整数，空地址 NULL 用 -1 来表示。
+随后 N 行，每行按以下格式描述一个结点：
+1地址 键值 下一个结点
+
+其中地址是该结点的地址，键值是绝对值不超过104的整数，下一个结点是下个结点的地址。
+输出格式：首先输出去重后的链表，然后输出被删除的链表。每个结点占一行，按输入的格式输出。
+输入样例 1：12345600100 599999 -7 8765423854 -15 0000087654 15 -100000 -15 9999900100 21 23854
+
+输出样例 1：1234500100 21 2385423854 -15 9999999999 -7 - ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/01/19/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-3%E3%80%917-8-%E5%85%B3%E4%BA%8E%E5%A0%86%E7%9A%84%E5%88%A4%E6%96%AD/" title="【2021天梯赛训练-3】7-8 关于堆的判断">     <img class="post_bg" data-src="/images/2021.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【2021天梯赛训练-3】7-8 关于堆的判断"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/19/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-3%E3%80%917-8-%E5%85%B3%E4%BA%8E%E5%A0%86%E7%9A%84%E5%88%A4%E6%96%AD/" title="【2021天梯赛训练-3】7-8 关于堆的判断">【2021天梯赛训练-3】7-8 关于堆的判断</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021-01-19 22:46:25"><i class="far fa-calendar-alt"></i>2021-01-19</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/">2021程序设计训练营</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/2021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-3/">2021天梯赛训练-3</a></span></div><div class="content">将一系列给定数字顺序插入一个初始为空的小顶堆H[]。随后判断一系列相关命题是否为真。命题分下列几种：
+
+x is the root：x是根结点；
+x and y are siblings：x和y是兄弟结点；
+x is the parent of y：x是y的父结点；
+x is a child of y：x是y的一个子结点。
+
+输入格式: 每组测试第1行包含2个正整数N（≤ 1000）和M（≤ 20），分别是插入元素的个数、以及需要判断的命题数。下一行给出区间[−10000,10000]内的N个要被插入一个初始为空的小顶堆的整数。之后M行，每行给出一个命题。题目保证命题中的结点键值都是存在的。 
+输出格式: 对输入的每个命题，如果其为真，则在一行中输出T，否则输出F。 
+输入样例:1234565 446 23 26 24 1024 is the root26 and 23 are siblings46 is the parent of 2323 is a child of 10
+
+输出样例:1234FTFT
+
+
+
+解题思路题目描述的很清楚了，给出一个入队顺序来维护一个小顶堆。复习一下：小 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/01/19/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-3%E3%80%917-9-%E5%88%97%E8%BD%A6%E8%B0%83%E5%BA%A6/" title="【2021天梯赛训练-3】7-9 列车调度">     <img class="post_bg" data-src="/images/2021.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【2021天梯赛训练-3】7-9 列车调度"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/19/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-3%E3%80%917-9-%E5%88%97%E8%BD%A6%E8%B0%83%E5%BA%A6/" title="【2021天梯赛训练-3】7-9 列车调度">【2021天梯赛训练-3】7-9 列车调度</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021-01-19 22:46:25"><i class="far fa-calendar-alt"></i>2021-01-19</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/">2021程序设计训练营</a><i class="fas fa-angle-right"></i><a class="article-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/2021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-3/">2021天梯赛训练-3</a></span></div><div class="content">两端分别是一条入口（Entrance）轨道和一条出口（Exit）轨道，它们之间有N条平行的轨道。每趟列车从入口可以选择任意一条轨道进入，最后从出口离开。在图中有9趟列车，在入口处按照{8，4，2，5，3，9，1，6，7}的顺序排队等待进入。如果要求它们必须按序号递减的顺序从出口离开，则至少需要多少条平行铁轨用于调度？ 
+输入格式: 输入第一行给出一个整数N (2 ≤ N ≤105)，下一行给出从1到N的整数序号的一个重排列。数字间以空格分隔。 
+输出格式: 在一行中输出可以将输入的列车按序号递减的顺序调离所需要的最少的铁轨条数。 
+输入样例:1298 4 2 5 3 9 1 6 7
+
+输出样例:14
+
+
+
+解题思路这题就是问：在一个1-N的重排列中最少有几个递增子序列。将这N个数按照输入的顺序依次处理，队列中某一位置的元素表示该递增子序列中最大的元素，这里用到的是贪心的思想：初始队列为空，把第一个输入数据入队，接下来每一个输入数据判断：若队列中存在一个比他小的元素，更新该元素为新的输入数据；若不存在，则该元素入队。（贪心的证明略）如果不加优化的话，就是每个数据判断的时候需要遍历一遍当前 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/29/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/29/">29</a><span class="page-number current">30</span><a class="page-number" href="/page/31/">31</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><a class="extend next" rel="next" href="/page/31/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">HBU</div><div class="author-info__description">2024河北大学程序设计训练营</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">351</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">151</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">分类</div><div class="length_num">74</div></a></div></div><div class="card-info-bookmark is-center"><button class="button--animated" id="bookmark-it" title="加入书签"><i class="fas fa-bookmark"></i><span>加入书签</span></button></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/hbuacm" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1076998404@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.nowcoder.com/study/live/425" target="_blank" title="nowcode"><i class="fab fa-youtube-play"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">2023暑假知行进阶营开始招生啦! </br>QQ群号码 2023暑假知行进阶营:875104634</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/2025/01/14/2025%E5%AF%92%E5%81%87%E6%96%B0%E7%94%9F%E8%90%A5%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%AE%AD%E7%BB%83/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="/images/tran1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" title="2025寒假新生营第一次训练" alt="2025寒假新生营第一次训练"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2025/01/14/2025%E5%AF%92%E5%81%87%E6%96%B0%E7%94%9F%E8%90%A5%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%AE%AD%E7%BB%83/" title="2025寒假新生营第一次训练">2025寒假新生营第一次训练</div><time class="aside-post_meta post-meta__date" title="发表于 2025-01-14 20:00:00">2025-01-14</time></div></a></div><div class="aside-recent-post"><a href="/2025/01/11/2025%E5%AF%92%E5%81%87%E6%96%B0%E7%94%9F%E8%90%A5%E5%BC%80%E8%90%A5%E6%B5%8B%E8%AF%95/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="/images/2025%E5%AF%92%E5%81%87%E8%AE%AD%E7%BB%83%E8%90%A5%E5%BC%80%E8%90%A5%E6%B5%8B%E8%AF%95.png" onerror="this.onerror=null;this.src='/img/404.jpg'" title="2025寒假新生营开营测试" alt="2025寒假新生营开营测试"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2025/01/11/2025%E5%AF%92%E5%81%87%E6%96%B0%E7%94%9F%E8%90%A5%E5%BC%80%E8%90%A5%E6%B5%8B%E8%AF%95/" title="2025寒假新生营开营测试">2025寒假新生营开营测试</div><time class="aside-post_meta post-meta__date" title="发表于 2025-01-11 21:30:00">2025-01-11</time></div></a></div><div class="aside-recent-post"><a href="/2024/08/10/2024%E6%9A%91%E5%81%87%E8%AE%AD%E7%BB%83week3/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="/images/week3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="2024暑假知行进阶营第三周题解" alt="2024暑假知行进阶营第三周题解"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2024/08/10/2024%E6%9A%91%E5%81%87%E8%AE%AD%E7%BB%83week3/" title="2024暑假知行进阶营第三周题解">2024暑假知行进阶营第三周题解</div><time class="aside-post_meta post-meta__date" title="发表于 2024-08-10 21:30:00">2024-08-10</time></div></a></div><div class="aside-recent-post"><a href="/2024/08/03/2024%E6%9A%91%E5%81%87%E8%AE%AD%E7%BB%83week2/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="/images/week2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" title="2024暑假知行进阶营第二周题解" alt="2024暑假知行进阶营第二周题解"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2024/08/03/2024%E6%9A%91%E5%81%87%E8%AE%AD%E7%BB%83week2/" title="2024暑假知行进阶营第二周题解">2024暑假知行进阶营第二周题解</div><time class="aside-post_meta post-meta__date" title="发表于 2024-08-03 21:30:00">2024-08-03</time></div></a></div><div class="aside-recent-post"><a href="/2024/07/27/2024%E6%9A%91%E5%81%87%E8%AE%AD%E7%BB%83week1/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="/images/2022week1.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="2024暑假知行进阶营第一周题解" alt="2024暑假知行进阶营第一周题解"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2024/07/27/2024%E6%9A%91%E5%81%87%E8%AE%AD%E7%BB%83week1/" title="2024暑假知行进阶营第一周题解">2024暑假知行进阶营第一周题解</div><time class="aside-post_meta post-meta__date" title="发表于 2024-07-27 21:30:00">2024-07-27</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/2020%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/"><span class="card-category-list-name">2020程序设计训练营</span><span class="card-category-list-count">34</span></a></li><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/2020%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/%E7%AC%AC0%E5%91%A8-c-stl/"><span class="card-category-list-name">第0周 c++ stl</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/2020%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/%E7%AC%AC1%E5%91%A8-%E5%88%9D%E7%BA%A7%E7%AE%97%E6%B3%95/"><span class="card-category-list-name">第1周 初级算法</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/2020%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/%E7%AC%AC2%E5%91%A8-%E6%95%B0%E5%AD%A6%E6%A8%A1%E6%8B%9F/"><span class="card-category-list-name">第2周 数学模拟</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/2020%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/%E7%AC%AC3%E5%91%A8-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"><span class="card-category-list-name">第3周 动态规划</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/2020%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/%E7%AC%AC4%E5%91%A8-%E5%9B%BE/"><span class="card-category-list-name">第4周 图</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/2020%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/%E7%AC%AC4%E5%91%A8-%E6%A0%91/"><span class="card-category-list-name">第4周 树</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/2020%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/%E7%AC%AC5%E5%91%A8-%E5%9B%BE/"><span class="card-category-list-name">第5周 图</span><span class="card-category-list-count">1</span></a></li></ul>
+            <li class="card-category-list-item more is-center"><a class="card-category-list-link-more" href="/categories">
+                <span>查看更多</span><i class="fas fa-angle-right"></i></a></li>           
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%9D%82%E7%B3%85/" style="font-size: 22px; color: #99a9bf">-杂糅</a> <a href="/tags/%E6%A0%88/" style="font-size: 20px; color: #99a4b2">-栈</a> <a href="/tags/%E6%A0%88-%E9%98%9F%E5%88%97/" style="font-size: 16px; color: #999">-栈 队列</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 16px; color: #999">-链表</a> <a href="/tags/%E9%98%9F%E5%88%97/" style="font-size: 18px; color: #999ea6">-队列</a> <a href="/tags/1-1-%E4%BA%A4%E6%8D%A2%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 16px; color: #999">1-1 交换两个字符串</a> <a href="/tags/1-2-2017Final-%E5%9C%86%E5%91%A8%E7%8E%87%E5%B1%B1/" style="font-size: 16px; color: #999">1-2 2017Final 圆周率山</a> <a href="/tags/1-3-%E8%8B%B1%E6%96%87%E5%AD%97%E6%AF%8D/" style="font-size: 16px; color: #999">1-3 英文字母</a> <a href="/tags/1-4-%E7%BB%A9%E7%82%B9%E8%AE%A1%E7%AE%97/" style="font-size: 16px; color: #999">1-4 绩点计算</a> <a href="/tags/1-5-%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF/" style="font-size: 16px; color: #999">1-5 约瑟夫环</a> <a href="/tags/1-7-%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E5%8D%95%E9%93%BE%E8%A1%A8%E6%B1%82%E5%B7%AE%E9%9B%86/" style="font-size: 16px; color: #999">1-7 两个有序单链表求差集</a> <a href="/tags/7-1-%E4%B9%A6%E5%8F%B7%E5%88%A4%E6%96%AD%E4%B8%8E%E7%BA%A0%E9%94%99/" style="font-size: 16px; color: #999">7-1 书号判断与纠错</a> <a href="/tags/7-1-%E5%88%97%E5%87%BA%E5%8F%B6%E7%BB%93%E7%82%B9-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-1 列出叶结点 题解</a> <a href="/tags/7-1-%E5%AD%90%E9%9B%86%E5%92%8C%E9%97%AE%E9%A2%98-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-1 子集和问题 题解</a> <a href="/tags/7-1-%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E5%92%8C%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-1 最大公约数和最小公倍数 题解</a> <a href="/tags/7-1-%E6%B5%AA%E6%BC%AB%E4%BE%A7%E5%BD%B1-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-1 浪漫侧影 题解</a> <a href="/tags/7-2-h0039-%E5%B9%B3%E6%96%B9%E6%95%B0-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-2 h0039. 平方数 题解</a> <a href="/tags/7-2-%E5%8D%8A%E6%95%B0%E9%9B%86-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-2 半数集 题解</a> <a href="/tags/7-2-%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-2 完全二叉树的层序遍历 题解</a> <a href="/tags/7-2-%E5%B9%B6%E6%9F%A5%E9%9B%86%E3%80%90%E6%A8%A1%E6%9D%BF%E3%80%91-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-2 并查集【模板】 题解</a> <a href="/tags/7-3-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86%EF%BC%81%EF%BC%88%E7%AE%80%E5%8D%95%EF%BC%89-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-3 二叉树的遍历！（简单） 题解</a> <a href="/tags/7-3-%E6%89%BE%E9%9B%B6%E9%92%B1-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-3 找零钱 题解</a> <a href="/tags/7-3-%E7%B4%A0%E6%95%B0%E5%AF%B9%E7%8C%9C%E6%83%B3-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-3 素数对猜想 题解</a> <a href="/tags/7-3-%E9%83%A8%E8%90%BD-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-3 部落 题解</a> <a href="/tags/7-4-%E5%B7%A5%E4%BD%9C%E5%88%86%E9%85%8D%E9%97%AE%E9%A2%98-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-4 工作分配问题 题解</a> <a href="/tags/7-4-%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E4%B9%8BDijkstra-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-4 最短路径之Dijkstra 题解</a> <a href="/tags/7-4-%E8%BF%98%E5%8E%9F%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 16px; color: #999">7-4 还原二叉树</a> <a href="/tags/7-4-%E9%9B%86%E5%90%88%E7%9B%B8%E4%BC%BC%E5%BA%A6-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-4 集合相似度 题解</a> <a href="/tags/7-5-3824%E7%BB%8F%E5%85%B8%E6%B8%B8%E6%88%8F-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-5 3824经典游戏 题解</a> <a href="/tags/7-5-%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8/" style="font-size: 16px; color: #999">7-5 图的存储</a> <a href="/tags/7-5-%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E7%AE%97%E6%B3%95-Floyd-Warshall-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-5 最短路径算法(Floyd-Warshall) 题解</a> <a href="/tags/7-5-%E6%A0%91%E7%A7%8D%E7%BB%9F%E8%AE%A1-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-5 树种统计 题解</a> <a href="/tags/7-6-%E5%88%97%E5%87%BA%E8%BF%9E%E9%80%9A%E9%9B%86/" style="font-size: 16px; color: #999">7-6 列出连通集</a> <a href="/tags/7-6-%E5%93%88%E5%88%A9%C2%B7%E6%B3%A2%E7%89%B9%E7%9A%84%E8%80%83%E8%AF%95-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-6 哈利·波特的考试 题解</a> <a href="/tags/7-6-%E7%82%B9%E8%B5%9E%E7%8B%82%E9%AD%94-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-6 点赞狂魔 题解</a> <a href="/tags/7-7-%E5%85%AC%E8%B7%AF%E6%9D%91%E6%9D%91%E9%80%9A-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-7 公路村村通 题解</a> <a href="/tags/7-7-%E5%93%A5%E5%B0%BC%E6%96%AF%E5%A0%A1%E7%9A%84%E2%80%9C%E4%B8%83%E6%A1%A5%E9%97%AE%E9%A2%98%E2%80%9D/" style="font-size: 16px; color: #999">7-7 哥尼斯堡的“七桥问题”</a> <a href="/tags/7-7-%E5%A4%A9%E6%A2%AF%E8%B5%9B%E5%BA%A7%E4%BD%8D%E5%88%86%E9%85%8D-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">7-7 天梯赛座位分配 题解</a> <a href="/tags/7-8-%E6%97%85%E6%B8%B8%E8%A7%84%E5%88%92/" style="font-size: 16px; color: #999">7-8 旅游规划</a> <a href="/tags/A-B-%E9%A2%98%E8%A7%A3/" style="font-size: 16px; color: #999">A+B 题解</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">一月 2025</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">八月 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">七月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月 2023</span><span class="card-archive-list-count">13</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/08/"><span class="card-archive-list-date">八月 2022</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/07/"><span class="card-archive-list-date">七月 2022</span><span class="card-archive-list-count">42</span></a></li><li class="card-archive-list-item more is-center"><a class="card-archive-list-link-more" href="/archives">
+              <span>查看更多</span><i class="fas fa-angle-right"  ></i></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">351</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count">     </div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By HBU</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">繁</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/third-party/click_heart.js"></script><script src="/js/third-party/ClickShowText.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var subtitleType = function () {
+  var subtitleEffect = true
+  fetch('https://v1.hitokoto.cn')
+    .then(function (res) {
+      return res.json()
+    })
+    .then(function (data) {
+      if (subtitleEffect) {
+        var from = '出自 ' + data.from
+        var sub = "今日事&#44;今日畢".length == 0 ? new Array() : "今日事&#44;今日畢".split(',')
+        var both = sub.unshift(data.hitokoto, from)
+        var typed = new Typed('#subtitle', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('subtitle').innerHTML = data.hitokoto
+      }
+    })
+    .catch(function (err) {
+      console.error(err)
+    })
+}
+window.addEventListener('load', subtitleType)
+</script></body></html>

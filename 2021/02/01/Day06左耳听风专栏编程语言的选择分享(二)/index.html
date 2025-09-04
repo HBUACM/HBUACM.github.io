@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>每日分享day6 左耳听风专栏分享(二)编程语言选择 | HBUACM</title><meta name="description" content="河北大学程序设计训练营每日分享-day06 左耳听风 专栏推荐Day06左耳听风专栏编程语言的选择 今天开始放慢一下分享的脚步 毕竟整个专栏是老牌程序员半辈子知识储备和经验的呈现，哪能轻松且短期都吸收呢！ 今天就只分享这一篇文章 关于语言的选择  73 | 程序员练级攻略：编程语言 陈皓 2018-06-12 一个合格的程序员应该掌握几门语言。一方面，这会让你对不同的语言进行比较，让你有更多的思考"><meta name="keywords" content="每日分享,专栏推荐,程序员人生,左耳听风,编程语言"><meta name="author" content="HBU"><meta name="copyright" content="HBU"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://hbuacm.github.io/2021/02/01/Day06%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%E4%B8%93%E6%A0%8F%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9A%84%E9%80%89%E6%8B%A9%E5%88%86%E4%BA%AB(%E4%BA%8C)/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="article"><meta property="og:title" content="每日分享day6 左耳听风专栏分享(二)编程语言选择"><meta property="og:url" content="http://hbuacm.github.io/2021/02/01/Day06%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%E4%B8%93%E6%A0%8F%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9A%84%E9%80%89%E6%8B%A9%E5%88%86%E4%BA%AB(%E4%BA%8C)/"><meta property="og:site_name" content="HBUACM"><meta property="og:description" content="河北大学程序设计训练营每日分享-day06 左耳听风 专栏推荐Day06左耳听风专栏编程语言的选择 今天开始放慢一下分享的脚步 毕竟整个专栏是老牌程序员半辈子知识储备和经验的呈现，哪能轻松且短期都吸收呢！ 今天就只分享这一篇文章 关于语言的选择  73 | 程序员练级攻略：编程语言 陈皓 2018-06-12 一个合格的程序员应该掌握几门语言。一方面，这会让你对不同的语言进行比较，让你有更多的思考"><meta property="og:image" content="http://hbuacm.github.io/images/share.jpg"><meta property="article:published_time" content="2021-02-01T13:46:25.000Z"><meta property="article:modified_time" content="2025-09-04T14:31:43.964Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="prev" title="【2021天梯赛训练-8】7-5 整除光棍" href="http://hbuacm.github.io/2021/02/02/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-8%E3%80%917-5-%E6%95%B4%E9%99%A4%E5%85%89%E6%A3%8D/"><link rel="next" title="每日分享day5 左耳听风专栏分享(一)编程正式入门" href="http://hbuacm.github.io/2021/01/31/Day05%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%E4%B8%93%E6%A0%8F%E5%88%86%E4%BA%AB/"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/blueimp-md5/js/md5.min.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"C++,二叉树,String,图,堆,栈,队列,头秃,AC,WA","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.1"></head><body><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">351</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">151</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">74</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/guestbook"><i class="fa-fw fas fa-message"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#左耳听风-专栏推荐"><span class="toc-number">1.</span> <span class="toc-text">左耳听风 专栏推荐</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Day06左耳听风专栏编程语言的选择"><span class="toc-number">1.1.</span> <span class="toc-text">Day06左耳听风专栏编程语言的选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#摘录作者关于理论知识的理解"><span class="toc-number">1.1.1.</span> <span class="toc-text">摘录作者关于理论知识的理解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最后"><span class="toc-number">1.2.</span> <span class="toc-text">最后</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/images/share.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">HBUACM</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/guestbook"><i class="fa-fw fas fa-message"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">每日分享day6 左耳听风专栏分享(二)编程语言选择</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2021-02-01 13:46:25"><i class="far fa-calendar-alt fa-fw"></i> 发表于 2021-02-01</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2025-09-04 14:31:43"><i class="fas fa-history fa-fw"></i> 更新于 2025-09-04</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fas fa-inbox fa-fw post-meta__icon"></i><a class="post-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/">2021程序设计训练营</a><i class="fas fa-angle-right post-meta__separator"></i><i class="fas fa-inbox fa-fw post-meta__icon"></i><a class="post-meta__categories" href="/categories/2021%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/%E6%AF%8F%E6%97%A5%E5%88%86%E4%BA%AB/">每日分享</a></span></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta__icon"></i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><p><strong>河北大学程序设计训练营每日分享-day06</strong></p>
+<h1 id="左耳听风-专栏推荐"><a href="#左耳听风-专栏推荐" class="headerlink" title="左耳听风 专栏推荐"></a>左耳听风 专栏推荐</h1><h2 id="Day06左耳听风专栏编程语言的选择"><a href="#Day06左耳听风专栏编程语言的选择" class="headerlink" title="Day06左耳听风专栏编程语言的选择"></a>Day06左耳听风专栏编程语言的选择</h2><blockquote>
+<p>今天开始放慢一下分享的脚步</p>
+<p>毕竟整个专栏是老牌程序员半辈子知识储备和经验的呈现，哪能轻松且短期都吸收呢！</p>
+<p>今天就只分享这一篇文章</p>
+<p>关于语言的选择</p>
+</blockquote>
+<p><a href="https://time.geekbang.org/column/article/8701" target="_blank" rel="noopener">73 | 程序员练级攻略：编程语言 陈皓 2018-06-12</a></p>
+<p>一个合格的程序员应该掌握几门语言。一方面，这会让你对不同的语言进行比较，让你有更多的思考。另一方面，这也是一种学习能力的培养，会让你对于未来的新技术学习得更快。</p>
+<p><strong>一个合格的程序员应该掌握几门语言。</strong></p>
+<p><strong>一方面，这会让你对不同的语言进行比较，让你有更多的思考。</strong></p>
+<p><strong>另一方面，这也是一种学习能力的培养，会*让你对于未来的新技术学习得更快。</strong></p>
+<p>在编程语言方面，作者推荐学习 C、C++、Java 和 Go 四门语言，并分别阐释了推荐的原因。</p>
+<h3 id="摘录作者关于理论知识的理解"><a href="#摘录作者关于理论知识的理解" class="headerlink" title="摘录作者关于理论知识的理解"></a>摘录作者关于理论知识的理解</h3><blockquote>
+<p><strong>理论学科</strong>。</p>
+<p>你需要学习像算法、数据结构、网络模型、计算机原理等计算机科学专业需要学习的知识。</p>
+<p>为什么要学好这些理论上的知识呢？</p>
+<p>其一，这些理论知识可以说是计算机科学这门学科最精华的知识了。说得大一点，这些是人类智慧的精华。你只要想成为高手，这些东西是你必需要掌握和学习的。</p>
+<p>其二，当你在解决一些很复杂或是很难的问题时，这些基础理论知识可以帮到你很多。我过去这 20 年从这些基础理论知识中受益匪浅。</p>
+<p>其三，这些理论知识的思维方式可以让你有触类旁通，一通百通的感觉。虽然知识比较难啃，但啃过以后，你将获益终生。</p>
+<p>另外，你千万不要觉得在你的日常工作或是生活当中根本用不上，学了也白学，这样的思维方式千万不要有，因为这是平庸的思维方式。</p>
+<p>如果你想等我用到了再学也不晚，那么你有必要看一下这篇文章《<a href="https://coolshell.cn/articles/4235.html" target="_blank" rel="noopener">程序员的荒谬之言还是至理名言？</a>》。</p>
+</blockquote>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>这篇专栏极大丰富了知识视野，技术提升是没有捷径的，唯有不断学习与实践，这篇文章可以当做一个指路明灯，适合反复的回过头来观看。</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">HBU</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://hbuacm.github.io/2021/02/01/Day06%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%E4%B8%93%E6%A0%8F%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9A%84%E9%80%89%E6%8B%A9%E5%88%86%E4%BA%AB(%E4%BA%8C)/">http://hbuacm.github.io/2021/02/01/Day06%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%E4%B8%93%E6%A0%8F%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9A%84%E9%80%89%E6%8B%A9%E5%88%86%E4%BA%AB(%E4%BA%8C)/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://HBUACM.github.io" target="_blank">HBUACM</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%AF%8F%E6%97%A5%E5%88%86%E4%BA%AB/">每日分享</a><a class="post-meta__tags" href="/tags/%E4%B8%93%E6%A0%8F%E6%8E%A8%E8%8D%90/">专栏推荐</a><a class="post-meta__tags" href="/tags/%E7%A8%8B%E5%BA%8F%E5%91%98%E4%BA%BA%E7%94%9F/">程序员人生</a><a class="post-meta__tags" href="/tags/%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E/">左耳听风</a><a class="post-meta__tags" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a></div><div class="post_share"><div class="social-share" data-image="/images/tran1.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/02/02/%E3%80%902021%E5%A4%A9%E6%A2%AF%E8%B5%9B%E8%AE%AD%E7%BB%83-8%E3%80%917-5-%E6%95%B4%E9%99%A4%E5%85%89%E6%A3%8D/"><img class="prev-cover" data-src="/images/2021.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">【2021天梯赛训练-8】7-5 整除光棍</div></div></a></div><div class="next-post pull-right"><a href="/2021/01/31/Day05%E5%B7%A6%E8%80%B3%E5%90%AC%E9%A3%8E%E4%B8%93%E6%A0%8F%E5%88%86%E4%BA%AB/"><img class="next-cover" data-src="/images/share.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">每日分享day5 左耳听风专栏分享(一)编程正式入门</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2021/01/31/Day05左耳听风专栏分享/" title="每日分享day5 左耳听风专栏分享(一)编程正式入门"><img class="relatedPosts_cover" data-src="/images/share.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2021-01-31</div><div class="relatedPosts_title">每日分享day5 左耳听风专栏分享(一)编程正式入门</div></div></a></div><div class="relatedPosts_item"><a href="/2021/02/02/Day07左耳听风专栏基础学科学习/" title="每日分享day7 左耳听风专栏分享(三)理论学科学习"><img class="relatedPosts_cover" data-src="/images/share.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2021-02-02</div><div class="relatedPosts_title">每日分享day7 左耳听风专栏分享(三)理论学科学习</div></div></a></div><div class="relatedPosts_item"><a href="/2021/02/04/Day09左耳听风专栏软件开发/" title="每日分享day9 左耳听风专栏分享(五)软件开发"><img class="relatedPosts_cover" data-src="/images/share.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2021-02-04</div><div class="relatedPosts_title">每日分享day9 左耳听风专栏分享(五)软件开发</div></div></a></div><div class="relatedPosts_item"><a href="/2021/02/05/Day10左耳听风专栏Linux系统、内存和网络/" title="每日分享day9 左耳听风专栏分享(六)Linux系统、内存和网络"><img class="relatedPosts_cover" data-src="/images/share.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2021-02-05</div><div class="relatedPosts_title">每日分享day9 左耳听风专栏分享(六)Linux系统、内存和网络</div></div></a></div><div class="relatedPosts_item"><a href="/2021/02/03/Day08左耳听风专栏系统知识学习/" title="每日分享day8 左耳听风专栏分享(四)系统知识学习"><img class="relatedPosts_cover" data-src="/images/share.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2021-02-03</div><div class="relatedPosts_title">每日分享day8 左耳听风专栏分享(四)系统知识学习</div></div></a></div><div class="relatedPosts_item"><a href="/2023/01/03/2023寒假训练每日分享day2/" title="day2 编程语言如何实现?"><img class="relatedPosts_cover" data-src="/images/DailySharing.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2023-01-03</div><div class="relatedPosts_title">day2 编程语言如何实现?</div></div></a></div></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="gitalk-container"></div><script>var gitalk = new Gitalk({
+  clientID: '10d68cea9de0fd657363',
+  clientSecret: '85f2367b6b4481a4d6231dee16575344c90c8da0',
+  repo: 'HBUACM.github.io',
+  owner: 'HBUACM',
+  admin: ['HANXU2018'],
+  id: md5(decodeURI(location.pathname)),
+  language: 'zh-CN',
+  perPage: 10,
+  distractionFreeMode: false,
+  pagerDirection: 'last',
+  createIssueManually: false,
+  updateCountCallback: commentCount
+})
+gitalk.render('gitalk-container')
+
+function commentCount(n){
+  try {
+    document.getElementsByClassName('gitalk-comment-count')[0].innerHTML= n
+  } catch (e) {
+    return false
+  }
+}</script></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By HBU</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button id="readmode" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font_plus" title="放大字体"><i class="fas fa-plus"></i></button><button id="font_minus" title="缩小字体"><i class="fas fa-minus"></i></button><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">繁</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fas fa-comments"></i></a><button class="close" id="mobile-toc-button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/third-party/click_heart.js"></script><script src="/js/third-party/ClickShowText.js"></script></body></html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>day23 Carbon语言 | HBUACM</title><meta name="description" content="取代 C++，Google 强势开源 Carbon语言每一种编程语言都曾想一统江湖，将其他语言取而代之。但事实上，能够在众多竞争者中脱颖而出并雄霸一方天地并非易事。今天，谷歌重磅公开了其内部建立的最新编程语言——Carbon，剑指 C++，欲成为其实验性继任者。 历朝历代的“继承者们”多年来，谷歌创建了许多编程语言，其中一些已经广为流行并深受大家的喜爱。例如，Golang（简称 Go）是为了改善服"><meta name="keywords" content="每日分享,Carbon语言"><meta name="author" content="HBU"><meta name="copyright" content="HBU"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://hbuacm.github.io/2022/07/26/%E6%AF%8F%E6%97%A5%E5%88%86%E4%BA%AB2022day23%EF%BC%9ACarbon/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="article"><meta property="og:title" content="day23 Carbon语言"><meta property="og:url" content="http://hbuacm.github.io/2022/07/26/%E6%AF%8F%E6%97%A5%E5%88%86%E4%BA%AB2022day23%EF%BC%9ACarbon/"><meta property="og:site_name" content="HBUACM"><meta property="og:description" content="取代 C++，Google 强势开源 Carbon语言每一种编程语言都曾想一统江湖，将其他语言取而代之。但事实上，能够在众多竞争者中脱颖而出并雄霸一方天地并非易事。今天，谷歌重磅公开了其内部建立的最新编程语言——Carbon，剑指 C++，欲成为其实验性继任者。 历朝历代的“继承者们”多年来，谷歌创建了许多编程语言，其中一些已经广为流行并深受大家的喜爱。例如，Golang（简称 Go）是为了改善服"><meta property="og:image" content="http://hbuacm.github.io/images/DailySharing.png"><meta property="article:published_time" content="2022-07-26T09:00:00.000Z"><meta property="article:modified_time" content="2025-09-04T14:31:43.977Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="prev" title="区块链" href="http://hbuacm.github.io/2022/07/26/%E6%AF%8F%E6%97%A5%E5%88%86%E4%BA%AB2022day22/"><link rel="next" title="day21 开发者偏爱Linux的9大理由" href="http://hbuacm.github.io/2022/07/25/%E6%AF%8F%E6%97%A5%E5%88%86%E4%BA%AB2022day21/"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/blueimp-md5/js/md5.min.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"C++,二叉树,String,图,堆,栈,队列,头秃,AC,WA","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.1"></head><body><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">351</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">151</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">74</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/guestbook"><i class="fa-fw fas fa-message"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#取代-C-，Google-强势开源-Carbon语言"><span class="toc-number">1.</span> <span class="toc-text">取代 C++，Google 强势开源 Carbon语言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#历朝历代的“继承者们”"><span class="toc-number">1.1.</span> <span class="toc-text">历朝历代的“继承者们”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#取代-C-，Carbon-的使命"><span class="toc-number">1.2.</span> <span class="toc-text">取代 C++，Carbon 的使命</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#“学不动”的开发者们，依然期待"><span class="toc-number">1.3.</span> <span class="toc-text">“学不动”的开发者们，依然期待</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/images/DailySharing.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">HBUACM</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/guestbook"><i class="fa-fw fas fa-message"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">day23 Carbon语言</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2022-07-26 09:00:00"><i class="far fa-calendar-alt fa-fw"></i> 发表于 2022-07-26</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2025-09-04 14:31:43"><i class="fas fa-history fa-fw"></i> 更新于 2025-09-04</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fas fa-inbox fa-fw post-meta__icon"></i><a class="post-meta__categories" href="/categories/2022%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/">2022程序设计训练营</a><i class="fas fa-angle-right post-meta__separator"></i><i class="fas fa-inbox fa-fw post-meta__icon"></i><a class="post-meta__categories" href="/categories/2022%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AE%AD%E7%BB%83%E8%90%A5/%E6%AF%8F%E6%97%A5%E5%88%86%E4%BA%AB/">每日分享</a></span></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta__icon"></i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h1 id="取代-C-，Google-强势开源-Carbon语言"><a href="#取代-C-，Google-强势开源-Carbon语言" class="headerlink" title="取代 C++，Google 强势开源 Carbon语言"></a>取代 C++，Google 强势开源 Carbon语言</h1><p>每一种编程语言都曾想一统江湖，将其他语言取而代之。但事实上，能够在众多竞争者中脱颖而出并雄霸一方天地并非易事。今天，谷歌重磅公开了其内部建立的最新编程语言——Carbon，剑指 C++，欲成为其实验性继任者。</p>
+<h2 id="历朝历代的“继承者们”"><a href="#历朝历代的“继承者们”" class="headerlink" title="历朝历代的“继承者们”"></a>历朝历代的“继承者们”</h2><p>多年来，谷歌创建了许多编程语言，其中一些已经广为流行并深受大家的喜爱。例如，Golang（简称 Go）是为了改善服务器和分布式系统的开发而创建的，后来被公众采用。同时，Dart 编程语言，最初是作为 JavaScript 的替代品，直到 Flutter 的发布后终于成为主流语言。</p>
+<p>日前在多伦多举行的 Cpp North 大会（专门讨论 C++ 的会议）上，谷歌首席软件工程师和开源软件开发者 Chandler Carruth 分享了一种名为 Carbon 的新编程语言的愿景。Carruth 展示了当今许多最流行的编程语言是如何拥有继承者的，这些继承者们利用了现代语言设计的优势，使开发者能够迅速提高生产力。</p>
+<p>正如我们熟知的，C++ 是 C 语言的继承者，Kotlin 是 Java 的继承者，Swift 是 Objective-C 的继承者，而来自微软的 TypeScript 彻底增强了 JavaScript，同时保持舒适的使用并能够“转译”回 JavaScript。那么，C++ 的继承者会是哪一个？<a href="https://so.csdn.net/so/search?q=Rust&spm=1001.2101.3001.7020" target="_blank" rel="noopener">Rust</a> 或者是这个新出现的 Carbon？<br><img src= "/img/loading.gif" data-src="https://img-blog.csdnimg.cn/e08984e2473347ae8acb7bcba5b3c7e9.png" alt="在这里插入图片描述"></p>
+<p>图源推特@Conor Hoekstra</p>
+<p>或许很多人会选择 Rust 作为 C++ 的后继语言。不可否认，想要启动新项目，Rust 是一种很好的语言选择，但它不像 Java 和 Kotlin 那样具有“双向互操作性”，因此很难稳定地迁移。借用Conor Hoekstra 的说法，“如果 Rust 今天适合你的项目，你应该使用它。但是未来想要将 C++ 项目背后的整个生态系统迁移到 Rust 是困难的。”</p>
+<p>为此，虽然 Carbon 有许多与 Rust 相同的目标，如帮助开发者创建“性能关键型软件”，但 Carbon 也打算与现有的 C++ 代码完全互通，并使从 C++ 迁移到 Carbon 尽可能容易。</p>
+<h2 id="取代-C-，Carbon-的使命"><a href="#取代-C-，Carbon-的使命" class="headerlink" title="取代 C++，Carbon 的使命"></a>取代 C++，Carbon 的使命</h2><p>为什么 C++ 开发人员可能想考虑在他们的代码库中引入 Carbon？</p>
+<p>尽管 C++ 仍然是性能关键型软件的主流编程语言，拥有庞大且不断增长的代码库。但其易用性较差、掌握难度大、以及由于语言功能过于丰富而易导致混乱等特点，也经常被人诟病。由于积累了几十年的技术债务，企图逐步改进 C++ 是非常困难的，这既是由于技术债务本身，也是由于其进化过程中的挑战。解决这些问题的最好方法是避免直接继承 C 或 C++ 的“遗产”，而是从坚实的语言基础开始，如构建现代泛型系统、模块化的代码组织和一致、简单的语法。</p>
+<p>正因如此，Carbon 应运而生，其目标如下：</p>
+<p><strong>1. 速度快，可与 C++ 一起使用</strong></p>
+<ul>
+<li>性能与使用LLVM的C++相匹配，具有对位和地址的低级访问</li>
+<li>从“遗产”到模板，实现与现有的 C++ 代码互操作</li>
+<li>快速和可扩展的构建，与现有的 C++ 构建系统一起工作</li>
+</ul>
+<p><strong>2. 现代化和并且能不断发展</strong></p>
+<ul>
+<li>坚实的语言基础，易于学习，特别是对于已经使用过 C++ 的人</li>
+<li>简单的、基于工具的 Carbon 版本之间的升级</li>
+<li>更安全的基本原理，以及逐步实现内存安全子集的途径</li>
+</ul>
+<p><strong>3. 打造受欢迎的开源社区</strong></p>
+<ul>
+<li>明确的目标和优先级，具有强大的管理能力</li>
+<li>社区致力于成为一个欢迎、包容和友好的社区</li>
+<li>包含“电池”的方法：编译器、库、文档、工具、包管理器等</li>
+</ul>
+<p>尽管 Carbon 是在谷歌内部开始的，但该团队愿意将其开源，为的是使其在未来能够获得成功，Carbon 需要成为一个“独立的并且由社区驱动的项目”，而不仅仅是为谷歌自用。</p>
+<h2 id="“学不动”的开发者们，依然期待"><a href="#“学不动”的开发者们，依然期待" class="headerlink" title="“学不动”的开发者们，依然期待"></a>“学不动”的开发者们，依然期待</h2><p>随着这门新语言的正式发布，不少开发者跃跃欲试，仅在 Hacker News（<a href="https://news.ycombinator.com/item?id=32151609）上就引发" target="_blank" rel="noopener">https://news.ycombinator.com/item?id=32151609）上就引发</a> 400 多名开发者关于该语言的探讨。</p>
+<p>前排“课代表”对 Carbon 做了进一步的总结：</p>
+<p>@<strong>cogman10</strong>：如果你像我一样，想知道 “是什么让 Carbon 与 Rust 或 Zig 不同？那我总结三点：</p>
+<ol>
+<li>能够与各种各样的代码互操作，如类/结构和模板，而不仅仅是自由函数。</li>
+<li>愿意将 C++ 的习性暴露在 Carbon 代码中，必要时也可以反过来，以使互操作层的性能最大化。</li>
+<li>使用包装器和通用编程，包括模板，以减少或消除运行时的开销。</li>
+</ol>
+<p>换句话说，Carbon 可以做 Rust 不能做的事情，就是用一个’foo’方法调用一个 C++ 类。或者创建一个带有’foo’方法的类，然后从 C++ 中调用该方法。这可能是实现 C++ 相互操作中要克服的最大障碍之一。大多数人不会这样做，相反，你会做一个 C 函数绑定和结构，并通过它移动数据/调用函数。</p>
+<p>另一名开发者指出了 Carbon 在安全方面可能存在的问题。</p>
+<p>@<strong>ansible</strong>：总的来说，Carbon 在安全方面做出了妥协，以便为 C++ 的发展提供一条道路。C++ 开发者必须能够自如地迁移他们的代码库，并且能够以一种基本自动化的方式进行迁移。为了实现自动迁移，Carbon 不能要求对迁移的 C++ 代码进行根本性的重新设计。虽然迁移工具在理论上可以将所有被迁移的代码标记为不安全的，但 Carbon 应该使用一种安全策略，对 C++ 代码进行优雅地降解并提供改进，无论是否被迁移。</p>
+<p>这并不意味着 Carbon 永远不会默认采用有保障的安全策略，只是 C++ 代码的性能和迁移需要优先考虑，任何设计都需要在其他目标的背景下考虑。以后仍有可能采用有保障的安全，尽管这需要确定一个迁移路径。</p>
+<p>这是非常有趣和务实的。如果他们最终能通过与 Rust 的借用检查器不同的路径得出同样水平的安全保证，那就很有意思了。</p>
+<p>由于他们的目标之一是将现代 C++ 自动翻译成Carbon，我确实想知道这在一般情况下会有多大效果。</p>
+<p>我绝对欢迎一个更容易阅读和理解的C++的替代品。这将是对世界的一个好处。</p>
+<p>对于想要尝鲜的小伙伴，现在就可以<a href="https://github.com/carbon-language/carbon-lang#getting-started" target="_blank" rel="noopener">下载源代码</a>在自己的电脑上体验了。另外，值得注意的是，Carbon 与免费的 <a href="https://carbon.compiler-explorer.com/" target="_blank" rel="noopener">Compiler Explorer</a> 网络应用也进行了整合，所以大家可以直接在浏览器中开始使用 Carbon 编程语言，用了之后也别忘了回来分享一下你的体验~~</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">HBU</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://hbuacm.github.io/2022/07/26/%E6%AF%8F%E6%97%A5%E5%88%86%E4%BA%AB2022day23%EF%BC%9ACarbon/">http://hbuacm.github.io/2022/07/26/%E6%AF%8F%E6%97%A5%E5%88%86%E4%BA%AB2022day23%EF%BC%9ACarbon/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://HBUACM.github.io" target="_blank">HBUACM</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%AF%8F%E6%97%A5%E5%88%86%E4%BA%AB/">每日分享</a><a class="post-meta__tags" href="/tags/Carbon%E8%AF%AD%E8%A8%80/">Carbon语言</a></div><div class="post_share"><div class="social-share" data-image="/images/tran1.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/07/26/%E6%AF%8F%E6%97%A5%E5%88%86%E4%BA%AB2022day22/"><img class="prev-cover" data-src="/images/DailySharing.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">区块链</div></div></a></div><div class="next-post pull-right"><a href="/2022/07/25/%E6%AF%8F%E6%97%A5%E5%88%86%E4%BA%AB2022day21/"><img class="next-cover" data-src="/images/DailySharing.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">day21 开发者偏爱Linux的9大理由</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2022/07/07/每日分享2022day04：c++集合操作/" title="day04 C++集合操作"><img class="relatedPosts_cover" data-src="/images/DailySharing.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2022-07-07</div><div class="relatedPosts_title">day04 C++集合操作</div></div></a></div><div class="relatedPosts_item"><a href="/2023/01/02/2023寒假训练每日分享day1/" title="day1 开发者偏爱Linux的9大理由"><img class="relatedPosts_cover" data-src="/images/DailySharing.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2023-01-02</div><div class="relatedPosts_title">day1 开发者偏爱Linux的9大理由</div></div></a></div><div class="relatedPosts_item"><a href="/2021/01/29/Day03 算法书籍分享/" title="每日分享day3 算法入门书籍"><img class="relatedPosts_cover" data-src="/images/share.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2021-01-29</div><div class="relatedPosts_title">每日分享day3 算法入门书籍</div></div></a></div><div class="relatedPosts_item"><a href="/2021/01/30/Day04算法慕课分享/" title="每日分享day4 算法MOOC分享"><img class="relatedPosts_cover" data-src="/images/share.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2021-01-30</div><div class="relatedPosts_title">每日分享day4 算法MOOC分享</div></div></a></div><div class="relatedPosts_item"><a href="/2021/01/31/Day05左耳听风专栏分享/" title="每日分享day5 左耳听风专栏分享(一)编程正式入门"><img class="relatedPosts_cover" data-src="/images/share.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2021-01-31</div><div class="relatedPosts_title">每日分享day5 左耳听风专栏分享(一)编程正式入门</div></div></a></div><div class="relatedPosts_item"><a href="/2021/02/01/Day06左耳听风专栏编程语言的选择分享(二)/" title="每日分享day6 左耳听风专栏分享(二)编程语言选择"><img class="relatedPosts_cover" data-src="/images/share.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2021-02-01</div><div class="relatedPosts_title">每日分享day6 左耳听风专栏分享(二)编程语言选择</div></div></a></div></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="gitalk-container"></div><script>var gitalk = new Gitalk({
+  clientID: '10d68cea9de0fd657363',
+  clientSecret: '85f2367b6b4481a4d6231dee16575344c90c8da0',
+  repo: 'HBUACM.github.io',
+  owner: 'HBUACM',
+  admin: ['HANXU2018'],
+  id: md5(decodeURI(location.pathname)),
+  language: 'zh-CN',
+  perPage: 10,
+  distractionFreeMode: false,
+  pagerDirection: 'last',
+  createIssueManually: false,
+  updateCountCallback: commentCount
+})
+gitalk.render('gitalk-container')
+
+function commentCount(n){
+  try {
+    document.getElementsByClassName('gitalk-comment-count')[0].innerHTML= n
+  } catch (e) {
+    return false
+  }
+}</script></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By HBU</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button id="readmode" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font_plus" title="放大字体"><i class="fas fa-plus"></i></button><button id="font_minus" title="缩小字体"><i class="fas fa-minus"></i></button><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">繁</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fas fa-comments"></i></a><button class="close" id="mobile-toc-button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/third-party/click_heart.js"></script><script src="/js/third-party/ClickShowText.js"></script></body></html>
